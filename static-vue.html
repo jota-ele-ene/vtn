@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>José Luis Núñez</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link href="css/static.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet">
+
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+
+<body>
+
+    <div class="title">
+	    <span>{{ greeting }}</span>
+	</div>
+
+    <div class="bg">
+        <div v-bind:background-image="background" class="image"></div>
+    </div>
+
+    <script src="js/static.js"></script>
+
+</body>
+
+</html>
