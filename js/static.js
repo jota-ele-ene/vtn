@@ -14,9 +14,11 @@ var appBackground = new Vue({
         loop: function () {
        		var that = this;
 		this.refreshBackground();
-		setTimeout( function () {
+		/*
+        setTimeout( function () {
               		  that.loop();
 			}, 2000);
+        */
        },
         humanizeURL(url) {
             return url
