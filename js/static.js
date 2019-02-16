@@ -10,10 +10,14 @@ var appBackground = new Vue({
     data: {
         image: "https://source.unsplash.com/random"
     },
-    mounted: function() {
-      alert("MOUNTED")
-    },
-    methods: {
+    methods:{
+        callFunction: function () {
+       		var that = this;
+			setTimeout( function () {
+              	refreshBackground();
+				    that.callFunction();
+							}, 2000);
+       },
         humanizeURL(url) {
             return url
             .replace(/^https?:\/\//, '')
@@ -30,4 +34,7 @@ var appBackground = new Vue({
             return "{ background-image: url(https://source.unsplash.com/random?="+ new Date().getTime() +");}"
         }
     },
+    mounted () {
+      this.loop()
+    }
 })
