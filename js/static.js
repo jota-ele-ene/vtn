@@ -10,6 +10,9 @@ var appBackground = new Vue({
     data: {
         image: "https://source.unsplash.com/random"
     },
+    mounted: function() {
+      alert("MOUNTED")
+    },
     methods: {
         humanizeURL(url) {
             return url
