@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome to Vue</title>
-  <script src="https://unpkg.com/vue"></script>
+
+    <title>José Luis Núñez</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link href="css/static.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet">
+
+    <script src="https://unpkg.com/vue"></script>
+
 </head>
+
 <body>
-  <div id="app">
-    <img src="https://vuejs.org/images/logo.png" alt="Vue logo">
-    <h1>{{ greeting }}</h1>
-    <ul>
-      <li>
-        To learn more about Vue, visit
-        <a :href="docsURL" target="_blank">
-          {{ humanizeURL(docsURL) }}
-        </a>
-      </li>
-      <li>
-        For live help with simple questions, check out
-        <a :href="discordURL" target="_blank">
-          the Discord chat
-        </a>
-      </li>
-      <li>
-        For more complex questions, post to
-        <a :href="forumURL" target="_blank">
-          the forum
-        </a>
-      </li>
-    </ul>
-  </div>
+
+    <div class="title">
+	    <span>{{ greeting }}</span>
+	</div>
+
+    <div class="bg">
+        <!--<button style="position:absolute;top:0;z-index:10" v-on:click="refreshBackground">Refresh</button>-->
+        <div class="image" :style="{ backgroundImage: 'url(' + image + ')' }"></div>
+    </div>
+
+    <script src="js/static.js"></script>
+
 </body>
+
 </html>

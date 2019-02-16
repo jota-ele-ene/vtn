@@ -11,11 +11,11 @@ var appBackground = new Vue({
         image: "https://source.unsplash.com/random"
     },
     methods:{
-        callFunction: function () {
+        loop: function () {
        		var that = this;
 			setTimeout( function () {
-              	refreshBackground();
-				    that.callFunction();
+              	background();
+				    that.loop();
 							}, 2000);
        },
         humanizeURL(url) {
