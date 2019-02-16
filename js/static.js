@@ -14,7 +14,7 @@ var appBackground = new Vue({
         loop: function () {
        		var that = this;
 		alert  ('hola');
-		this.background();
+		this.refreshBackground();
 		setTimeout( function () {
               		  that.loop();
 			}, 2000);
