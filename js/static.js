@@ -8,33 +8,30 @@ var appTitle = new Vue({
 var appBackground = new Vue({
     el: '.bg',
     data: {
-        image: "https://source.unsplash.com/random"
+        imageFirst: "https://source.unsplash.com/random?=first" + new Date().getTime(),
+        imageSecond: "https://source.unsplash.com/random?=second" + new Date().getTime(),
+        first:true,
+        to:false
     },
     methods:{
-        loop: function () {
-       		var that = this;
-		this.refreshBackground();
-		/*
-        setTimeout( function () {
-              		  that.loop();
-			}, 2000);
-        */
-       },
-        humanizeURL(url) {
-            return url
-            .replace(/^https?:\/\//, '')
-            .replace(/\/$/, '')
+        cancelTo() {
+            clearTimeout(this.to);
         },
         refreshBackground ()
         {
-            this.image = "https://source.unsplash.com/random?=" + new Date().getTime()
-        }
-
-    },
-    computed: {
-        background() {
-            return "{ background-image: url(https://source.unsplash.com/random?="+ new Date().getTime() +");}"
-        }
+          if (this.first)
+            this.imageSecond = "https://source.unsplash.com/random?=second" + new Date().getTime()
+          else
+            this.imageFirst = "https://source.unsplash.com/random?=first" + new Date().getTime()
+        },
+        loop: function () {
+   		    var that = this;
+            this.to = setTimeout( function () {
+                that.first = !that.first;
+          		that.refreshBackground();
+              	that.loop();
+			}, 10000);
+        },
     },
     mounted () {
       this.loop()
