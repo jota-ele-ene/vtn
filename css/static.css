@@ -41,3 +41,11 @@ body, html {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+/* paricles-js */
+#particles-js {
+    position:absolute;
+    top:0;
+    height: 100%;
+    width:100%;
+}
