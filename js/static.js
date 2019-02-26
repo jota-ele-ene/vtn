@@ -39,3 +39,9 @@ var appBackground = new Vue({
 })
 
 // Conversion from URL to Base64 via Canvas: http://jsfiddle.net/handtrix/YvQ5y/
+// particles.js: https://vincentgarreau.com/particles.js/
+// For circular navigation: https://tympanus.net/Tutorials/CircularNavigation/index.html
+//                          https://codepen.io/CreativePunch/pen/lAHiu/
+//                          https://codepen.io/seyedi/pen/YXEqwB
+//                          https://codepen.io/mahmoud-nb/pen/pbNBYP/
+//
