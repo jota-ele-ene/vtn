@@ -37,3 +37,5 @@ var appBackground = new Vue({
       this.loop()
     }
 })
+
+// Conversion from URL to Base64 via Canvas: http://jsfiddle.net/handtrix/YvQ5y/
