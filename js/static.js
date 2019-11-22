@@ -8,8 +8,8 @@ var appTitle = new Vue({
 var appBackground = new Vue({
     el: '.bg',
     data: {
-        imageFirst: "https://source.unsplash.com/random?=first" + new Date().getTime(),
-        imageSecond: "https://source.unsplash.com/random?=second" + new Date().getTime(),
+        imageFirst: "https://source.unsplash.com/random?trust&=first" + new Date().getTime(),
+        imageSecond: "https://source.unsplash.com/random?trust&=second" + new Date().getTime(),
         first:true,
         to:false
     },
@@ -20,9 +20,9 @@ var appBackground = new Vue({
         refreshBackground ()
         {
           if (this.first)
-            this.imageSecond = "https://source.unsplash.com/random?=second" + new Date().getTime()
+            this.imageSecond = "https://source.unsplash.com/random?trust&=second" + new Date().getTime()
           else
-            this.imageFirst = "https://source.unsplash.com/random?=first" + new Date().getTime()
+            this.imageFirst = "https://source.unsplash.com/random?trust&=first" + new Date().getTime()
         },
         loop: function () {
    		    var that = this;
