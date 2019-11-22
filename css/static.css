@@ -28,12 +28,15 @@ body, html {
     overflow:hidden;
 }
 .title {
-	font-family: 'Quantico', sans-serif;
+    font-family: arial black;
     position: absolute;
-    color: white;
+    color: black;
     z-index: 10;
     margin: 1em;
-    font-size: xx-large;
+    font-size: xxx-large;
+    top: 30%;
+    padding: 0.2em 0.4em;
+    background-color: white;
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity 5s ease;

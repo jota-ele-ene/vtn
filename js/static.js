@@ -1,7 +1,7 @@
 var appTitle = new Vue({
     el: '.title',
     data: {
-        greeting: 'Hello World!'
+        greeting: 'In TRUST we trust'
     }
 })
 

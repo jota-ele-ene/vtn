@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>José Luis Núñez</title>
+    <title>In TRUST we trust</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -28,7 +28,30 @@
         </transition>
     </div>
 
+    <template>
+    <p v-highlight="{ word: word, live: live }" >{{ text }}</p>
+    </template>
+
+    <script>
+    import vueHighlighter from 'vue-highlighter'
+
+    export default {
+    data: () => {
+        return {
+        text: 'I love Alessandra , AlessandraGiulio',
+        word: 'Alessandra',
+        live: false,
+        }
+    },
+    directives: {
+        vueHighlighter
+    }
+    }
+    </script>
+
+
     <script src="js/static.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-highlighter@2.5.3/dist/vue-highlighter.cjs.min.js"></script>
 
 </body>
 
