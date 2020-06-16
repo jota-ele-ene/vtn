@@ -1,0 +1,196 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>TrustOS EcoSmart Certificate</title>
+    <style>
+	@font-face {
+	  font-family: "Telefonica Bold";
+	  src: url("TelefonicaWeb-Bold.woff");
+	}
+	@font-face {
+	  font-family: "Telefonica Regular";
+	  src: url("TelefonicaWeb-Regular.woff");
+	}
+	@font-face {
+	  font-family: "Telefonica Light";
+	  src: url("TelefonicaWeb-Light.woff");
+	}
+	.header {
+	  background-image: url('Banner_EcoSmart.jpg');
+	  padding: 40;
+	  color: white;
+	  font-family: sans-serif;
+	  text-align: center;
+	  font-size: xxx-large;
+	  background-position: bottom;	
+	  height: 125px;
+	  margin:0;
+	}
+	th,.title {
+	  font-weight: bolder;
+	  font-size: large;
+	  font-family: Telefonica bold;
+	  margin: 0.5em;
+	}
+	.field {
+	  font-family: Telefonica Light;
+	}
+	.key {    	  
+    	  background-color: #f7f5f5;
+    	  padding: 5px;
+    	  font-weight: bolder;    	  
+    	  box-sizing: border-box;
+    	  line-height: 1.5;
+    	  color: #212529;
+    	  text-align: left;
+    	  font-family: monospace;
+	}
+	.foot {
+    	  color: darkgrey;
+    	  font-size: small;
+	  font-family: Telefonica light;
+	}
+	#transaction {
+	  border-collapse: collapse;
+	  font-family: Telefonica light;
+	  font-size: small;
+	}
+	#transaction td, #customers th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+	.icon {
+	  background-color: #fff;
+	}
+	#transaction tr:nth-child(even){background-color: #f2f2f2;}
+	#transaction tr:hover {background-color: #ddd;}
+	#transaction th, th:hover {
+	  padding: 6px 12px;
+	  text-align: left;
+	  background-color: #efe;
+	}
+    </style>
+</head>
+
+<body style="margin: 20px auto;width: 750px;">
+    <h2 class="header"></h2>
+    <div style="display: flex; flex-direction:row;">
+       <div style="flex:1; margin-left:20px;">
+	<h1 style="font-family: Telefonica Bold;">Smart Water</h1>
+	<p style="font-family: Telefonica Light;"><span style="font-family: Telefonica Regular;font-weight: bold;">Smart Water</span> permite la gestión del consumo de agua en remoto evitando desplazamientos y evitando fugas o averias. Al evitar los desplazamientos para lectura, <bold>reduce el consumo de cobustibles y las emisiones de CO<span style="vertical-align: sub;">2</span> </bold>asociadas, contribuyendo además a <bold>reducir el consumo de agua</bold>.</p>
+	<p style="text-align: center;"><img src="SelloSmartWater.png" style="height: 120;"></p>
+
+	    <table id="transaction">
+		<tbody><tr>
+		    <th colspan=2>Categorías ambientales</th>
+		    <th>Resolución</th>
+		    <th>Código de verificación</th>
+		    <th>Fecha</th>
+		</tr>
+		<tr>
+		    <td colspan=5 style="background-color:#FF7800;color:white;font-weight:bold;font-size:small;">Servicios que fomentan el ahorro energético</td>
+		</tr>
+		<tr>
+		    <td rowspan=5 class="icon"><img src="IconEnergy.png"></td>
+		    <td>Optimiza el proceso productivo del cliente y reduce el consumo de energia</td>
+		    <td style="color:green;text-align:center;">SI</td>
+		    <td>aeca2654b...677e762</td>
+		    <td>20/4/2020 12:46:06</td>
+		</tr>
+		<tr>
+		    <td>Reduce el consumo energético mediante el control y gestión de la energía en instalaciones</td>
+		    <td style="color:green;text-align:center;">SI</td>
+		    <td>7460b892f...35befed</td>
+		    <td>20/4/2020 12:56:21</td>
+		</tr>
+		<tr>
+		    <td>Optimiza las rutas logísticas o la flota y reduce el consumo de combustibles</td>
+		    <td style="color:green;text-align:center;">SI</td>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td>
+		</tr>
+		<tr>
+		    <td>Derivado del uso del servicio se reducen desplazamientos del cliente o su personal</td>
+		    <td style="color:green;text-align:center;">SI</td>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td>
+		</tr>
+		<tr>
+		    <td>La utilización del servicio se realiza con equipos más eficientes</td>
+		    <td style="color:red;text-align:center;">NO</td>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td>
+		</tr>
+		<tr>
+		    <td colspan=5 style="background-color:#2593b5;color:white;font-weight:bold;font-size:small;">Servicios que fomentan el consumo responsable del agua</td>
+		</tr>
+		<tr>
+		    <td rowspan=3 class="icon"><img src="IconWater.png"></td>
+		    <td>El servicio incluye control/gestión más eficiente del agua</td>
+		    <td style="color:green;text-align:center;">SI</td>
+		    <td>aeca2654b...677e762</td>
+		    <td>20/4/2020 12:46:06</td>
+		</tr>
+		<tr>
+		    <td>El servicio permite detectar fugas</td>
+		    <td style="color:green;text-align:center;">SI</td>
+		    <td>7460b892f...35befed</td>
+		    <td>20/4/2020 12:56:21</td>
+		</tr>
+		<tr>
+		    <td>El servicio mejora la calidad del agua</td>
+		    <td style="color:red;text-align:center;">NO</td>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td>
+		</tr>
+		<tr>
+		    <td colspan=5 style="background-color:#980098;color:white;font-weight:bold;font-size:small;">Servicios que fomentan el ahorro de emisiones de CO<span style="vertical-align: sub;">2</span></td>
+		</tr>
+		<tr>
+		    <td rowspan=3 class="icon"><img src="IconCO2.png"></td>
+		    <td>El servicio genera un ahorro de energía (electricidad, gas natural o combustibles) y sus emisiones asociadas</td>
+		    <td style="color:green;text-align:center;">SI</td>
+		    <td>aeca2654b...677e762</td>
+		    <td>20/4/2020 12:46:06</td>
+		</tr>
+		<tr>
+		    <td>Mejora el mantenimiento de equipos de climatización y por tanto evita la fuga de gases refrigerates</td>
+		    <td style="color:red;text-align:center;">NO</td>
+		    <td>7460b892f...35befed</td>
+		    <td>20/4/2020 12:56:21</td>
+		</tr>
+		<tr>
+		    <td>Mejora la planificación del tráfico, trasporte público y/o reduce el tráfico en ciudades</td>
+		    <td style="color:red;text-align:center;">NO</td>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td>
+		</tr>
+		<tr>
+		    <td colspan=5 style="background-color:#00966C;color:white;font-weight:bold;font-size:small;">Servicios que fomentan la economía circular</td>
+		</tr>
+		<tr>
+		    <td rowspan=3 class="icon"><img src="IconSavingsGrey.png"></td>
+		    <td>El servicio incluye mantenimiento de equipos físicos/HW y prolonga su vida útil</td>
+		    <td style="color:red;text-align:center;">NO</td>
+		    <td>aeca2654b...677e762</td>
+		    <td>20/4/2020 12:46:06</td>
+		</tr>
+		<tr>
+		    <td>Monitorización remota de equipos y bienes que minimizan mantenimiento</td>
+		    <td style="color:red;text-align:center;">NO</td>
+		    <td>7460b892f...35befed</td>
+		    <td>20/4/2020 12:56:21</td>
+		</tr>
+		<tr>
+		    <td>Incluye recogida y recilaje o restauración de dispositivos</td>
+		    <td style="color:red;text-align:center;">NO</td>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td>
+		</tr>
+	    </tbody></table>
+	    <br>
+	    <p class="foot">Puedes verificar el detalle de las resoluciones con respecto a cada categoría utilizando este código de verificación directamente en la plataforma <strong>TrustOS</strong>: <span style="background-color:#00edff">[HASH_CODE]</span> </p>
+	    <hr>
+        </div>
+    </div>
+
+</body></html>
