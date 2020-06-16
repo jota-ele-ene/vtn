@@ -1,0 +1,110 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>TrustOS Tracking Platform Certificate</title>
+    <style>
+	.header {
+	  background-image: url('https://bteam.virtualtrust.io/certs/static/media/trust-background.2bbf27d1.jpg');
+	  padding: 40;
+	  color: white;
+	  font-family: sans-serif;
+	  text-align: center;
+	  font-size: xxx-large;
+	  background-position: bottom;	
+	}
+	.title {
+	  font-weight: bolder;
+	  font-size: large;
+	  font-family: monospace;
+	  margin: 0.5em;
+	}
+	.field {
+	  font-family: monospace;
+	}
+	.key {    	  
+    	  background-color: #f7f5f5;
+    	  padding: 5px;
+    	  font-weight: bolder;    	  
+    	  box-sizing: border-box;
+    	  line-height: 1.5;
+    	  color: #212529;
+    	  text-align: left;
+    	  font-family: monospace;
+	}
+	.verified {
+	  color: green;
+	}
+	.tampered {
+	  color: red;
+	}
+	.foot {
+    	  color: darkgrey;
+    	  font-size: small;
+	}
+	#transaction {
+	  border-collapse: collapse;
+	  font-family: monospace;
+	}
+	#transaction td, #customers th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+	#transaction tr:nth-child(even){background-color: #f2f2f2;}
+	#transaction tr:hover {background-color: #ddd;}
+	#transaction th {
+	  padding: 6px 12px;
+	  text-align: left;
+	  background-color: #00edff;
+	  color: white;
+	}
+    </style>
+</head>
+
+<body style="margin: 20px auto;width: 750px;">
+    <h2 class="header"><span style="background-color:#00edff"> TrustOS</span> Platform</h2>
+    <div style="display: flex; flex-direction:row;">
+       <div style="flex:1; margin-left:20px;">
+	    <h1>Certificado de higienización de espacios</h1>
+            <p>El espacio identificado con el código<span style="background-color:#00edff">[AssetID]</span> gestionado por la plataforma de higienización de <strong>Telefónica </strong> ha sido desinfectado <span style="background-color:#00edff">[#tsn]</span> veces durante el periodo de referencia. Informaci´no detallada de cada desinfección puede encontrarse en la tabla incluida al final de este certificado</p> 
+            <p class="title">Espacio tratado</p>
+	    <p class="field"><b class="key">Empresa: </b> Telefónica</p>
+	    <p class="field"><b class="key">Identificador del espacio</b> DCW01-SP06-D23</p>
+	    <p class="field"> <p class="field"><b class="key">Empleado de limpieza</b> ASX26547</p></p>
+            
+<p class="title">Periodo</p>
+<p class="field"><span class="key">Inicio:</span> 20/4/2020 12:45:00</p> 
+<p class="field"><span class="key">Fin:</span> 20/4/2020 13:15:00</p>
+<p></p><p></p><p class="title">Detalles</p>
+
+	    <table id="transaction">
+		<tbody><tr>
+		    <th>ID de la tarea</th>
+		    <th>Empleado</th>
+		    <th>Sello de tiempo</th>
+<th>Status</th>
+		</tr>
+		<tr>
+		    <td>aeca2654b...677e762</td>
+		    
+<td>20/4/2020 12:46:06</td><td>ASX26547</td>
+		    <td class="verified">VERIFIED</td>
+		</tr>
+		<tr>
+		    <td>7460b892f...35befed</td>
+		    <td>20/4/2020 12:56:21</td><td>ASX26547</td>
+		    <td class="verified">VERIFIED</td>
+		</tr>
+		<tr>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td><td>ASX26547</td>
+		    <td class="tampered">WARNING</td>
+		</tr>
+	    </tbody></table>
+
+	    
+	    <br>
+	    <p class="foot">Todas las tareas referidas en este certificado pueden comprobarse directamente en la plataforma TrustOS mediante el código seguro de verificación: <span style="background-color:#00edff">[HASH_CODE]</span>. </p>
+	    <hr>
+        </div>
+    </div>
+
+</body></html>

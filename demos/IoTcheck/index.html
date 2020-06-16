@@ -1,0 +1,108 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>TrustOS Tracking Platform Certificate</title>
+    <style>
+	.header {
+	  background-image: url('https://bteam.virtualtrust.io/certs/static/media/trust-background.2bbf27d1.jpg');
+	  padding: 40;
+	  color: white;
+	  font-family: sans-serif;
+	  text-align: center;
+	  font-size: xxx-large;
+	  background-position: bottom;	
+	}
+	.title {
+	  font-weight: bolder;
+	  font-size: large;
+	  font-family: monospace;
+	  margin: 0.5em;
+	}
+	.field {
+	  font-family: monospace;
+	}
+	.key {    	  
+    	  background-color: #f7f5f5;
+    	  padding: 5px;
+    	  font-weight: bolder;    	  
+    	  box-sizing: border-box;
+    	  line-height: 1.5;
+    	  color: #212529;
+    	  text-align: left;
+    	  font-family: monospace;
+	}
+	.verified {
+	  color: green;
+	}
+	.tampered {
+	  color: red;
+	}
+	.foot {
+    	  color: darkgrey;
+    	  font-size: small;
+	}
+	#transaction {
+	  border-collapse: collapse;
+	  font-family: monospace;
+	}
+	#transaction td, #customers th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+	#transaction tr:nth-child(even){background-color: #f2f2f2;}
+	#transaction tr:hover {background-color: #ddd;}
+	#transaction th {
+	  padding: 6px 12px;
+	  text-align: left;
+	  background-color: #00edff;
+	  color: white;
+	}
+    </style>
+</head>
+
+<body style="margin: 20px auto;width: 750px;">
+    <h2 class="header"><span style="background-color:#00edff"> TrustOS</span> Platform</h2>
+    <div style="display: flex; flex-direction:row;">
+       <div style="flex:1; margin-left:20px;">
+	    <h1>Device Integrity Blockchain Service</h1>
+            <p>In relation to the device with ID <span style="background-color:#00edff">[AssetID]</span> monitored by the <bold>TrustOS</bold> platform, <span style="background-color:#00edff">[#tsn]</span> events were processed in the reference time interval. Detailed info for verifying the transactions can be found in the table below.</p> 
+            <p class="title">Devide data</p>
+	    <p class="field"><b class="key">Company:</b> ACME</p>
+	    <p class="field"><b class="key">Model:</b> Open source V2</p>
+	    <p class="field"><b class="key">Serial number:</b> ASX26547</p>
+            
+<p class="title">Reference time interval</p>
+<p class="field"><span class="key">Start:</span> 20/4/2020 12:45:00</p> 
+<p class="field"><span class="key">End:</span> 20/4/2020 13:15:00</p>
+<p></p><p></p><p class="title">Transactions details</p>
+
+	    <table id="transaction">
+		<tbody><tr>
+		    <th>Transaction ID</th>
+		    <th>Timestamp</th>
+		    <th>Status</th>
+		</tr>
+		<tr>
+		    <td>aeca2654b...677e762</td>
+		    <td>20/4/2020 12:46:06</td>
+		    <td class="verified">VERIFIED</td>
+		</tr>
+		<tr>
+		    <td>7460b892f...35befed</td>
+		    <td>20/4/2020 12:56:21</td>
+		    <td class="verified">VERIFIED</td>
+		</tr>
+		<tr>
+		    <td>c2d32b703...b2d6ce0</td>
+		    <td>20/4/2020 13:06:53</td>
+		    <td class="tampered">TAMPERED</td>
+		</tr>
+	    </tbody></table>
+
+	    <p>Therefore, the status of the device with date <span style="background-color:#00edff">[timestamp_end]</span> can be considered as <span style="background-color:green;color:white">UNTAMPERED</span>. </p>
+	    <p>Therefore, the status of the device with date <span style="background-color:#00edff">[timestamp_end]</span> can be considered as <span style="background-color:red;color:white">TAMPERED</span> since <span style="background-color:#00edff">[MESSAGE]</span>.</p><br>
+	    <p class="foot">You can check all transactions affecting this asset in the reference time range with this HASH code directly on the TrustOS platform: <span style="background-color:#00edff">[HASH_CODE]</span>. </p>
+	    <hr>
+        </div>
+    </div>
+
+</body></html>
