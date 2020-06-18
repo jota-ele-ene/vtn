@@ -1,0 +1,260 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="/certs/manifest.json">
+    <title>TrustOS Certs</title>
+    <link href="./css/App.css" rel="stylesheet">
+    <link href="./css/Certificate.css" rel="stylesheet">
+    <link href="./css/CopyButton.css" rel="stylesheet">
+    <link href="./css/MiniHeader.css" rel="stylesheet">
+    <link href="./css/Footer.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./util/jquery.json-viewer.js"></script>
+    <link href="./util/jquery.json-viewer.css" type="text/css" rel="stylesheet">
+
+    <style type="text/css">
+        .body {
+            font-family: Telefonica-Light;
+        }
+
+        .react-json-view .copy-to-clipboard-container {
+            vertical-align: top;
+            display: none
+        }
+
+        .react-json-view .click-to-add,
+        .react-json-view .click-to-edit,
+        .react-json-view .click-to-remove {
+            display: none
+        }
+
+        .react-json-view .object-content .variable-row:hover .click-to-edit,
+        .react-json-view .object-content .variable-row:hover .click-to-remove,
+        .react-json-view .object-key-val:hover>span>.object-meta-data>.click-to-add,
+        .react-json-view .object-key-val:hover>span>.object-meta-data>.click-to-remove,
+        .react-json-view .object-key-val:hover>span>.object-meta-data>.copy-to-clipboard-container,
+        .react-json-view .variable-row:hover .copy-to-clipboard-container {
+            display: inline-block
+        }
+    </style>
+</head>
+
+<body class="body" data-gr-c-s-loaded="true"><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div>
+            <div class="MiniHeader-div smaller" id="MiniHeader-div">
+                <h3><a>TrustOS Certs</a></h3>
+                <div class="MiniHeader-div-menu">
+                    <a href="http://bteam.virtualtrust.io" target="_blank">
+                    </a>
+                    <a>
+                        <div class="CopyButton-div">
+                            <div class="dad"><button class="btn-authorize">JWT &nbsp;<svg width="15" height="15"><svg
+                                            viewBox="0 0 20 20" id="unlocked" fill="#49cc90">
+                                            <path
+                                                d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z">
+                                            </path>
+                                        </svg></svg></button>&nbsp;&nbsp;<form><textarea class="text"
+                                        col="4">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCIsImV4cCI6MTU5MjM3OTU5OCwiaXNzIjoiVElEIiwiaWF0IjoxNTkyMzc1Mjc4LCJjaGFubmVsIjoiY2hhbm5lbDEifQ.CQorqS9LU1lPPSKkSj7gpvp2oB9KKYRvOrlH3K5Lmic</textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="Certificate-div">
+                <div class="Certificate-div-row">
+                    <div class="Certificate-div-row-image"><img
+                            src="https://images.unsplash.com/photo-1553341640-6b28ff92098a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80">
+                    </div>
+                    <div class="Certificate-div-row-checks">
+                        <div>
+                            <h4 id="document"><b>Check 1: </b> Document <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABH6SURBVHhe7dbZkiTnWcdhgX0BBPsaXIOOHTPVNZanKwcdIPAm27Jlm+0idCE+MWADwuqqGgPBsW+BfbEhguvAS0DVKFMetaq7a8l88/2+73kifqGY0Ux3TXVG/d9XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAyr36jVc/vtiuvvNku/rd/rcAgJrtx/9q3W2X2+7/dv2vIwAAKndr/IccAQBQqzvG/4MjYPn8+o3+jwIANXhg/IccAQBQiyPHf8gRAAClO3H83++m+6EjAAAKddb4DzkCAKA8F43/kCMAAMoxyvgP7Y6Aq033e/2XBgAyGnX8hxwBAJDXJOM/5AgAgHwmHf+h3RGw2K5+v/+WAMCcQsZ/yBEAAPPbj/9i020OjvVUOQIAYD6zjP/Q7gh48nz16f6lAAARZh3/IUcAAMRJMf5DjgAAmF6q8R9yBADAdFKO/9DuCFiun32mf6kAwBhSj/+QIwAAxlPE+A85AgDgckWN/5AjAADOV+T49z3ePv2RIwAATlTy+A85AgDgBDWM/9D+CLjadJ/t/2kAwCGPvvfoY7WM/5AjAADuUeP4DzkCAOCAmsd/aH8ELLarz/X/ZABoWwvjP+QIAICdlsZ/yBEAQNNaHP+h/RGwXF9/vn8rAKANLY//kCMAgKYY/5/mCACgCcb/ozkCAKia8b+7F0fApnuzf6sAoA7G/+EcAQBUxfgfnyMAgCoY/9PbHwFX29UX+rcQAMpi/M/PEQBAkfbjv9yu1ofGTcflCACgKMZ/vBwBABTB+I/fYvv0x44AANIy/tPlCAAgJeM/ffsjYLFefbF/ywFgXsY/LkcAACkY//gcAQDMyvjP1/4IWG6efan/UQBADOM/f44AAEIZ/zw5AgAIYfzz5QgAYFLGP28vjoBt91b/owKAcRj//DkCABjVi/Ffdze3B0f5cgQAMArjX177I+Bqvfpy/yMEgNMY/3JzBABwFuNffo4AAE5i/OtpfwQsNtdf6X+0AHCY8a8vRwAA9zL+9eYIAOAg419/+yNg99+3+x85AK0z/u3kCADgBePfXo4AgMYZ/3Z7cQSsV1/tHwUAWmH8tbzpfuIIAGiI8dcHOQIA2rAf/6tN997BMVCbOQIA6mb8dWeOAIA6GX89mCMAoC7GX0fnCACog/HXye2OgKvN6mv9IwRAaYy/zs4RAFAm46+LcwQAlMX4a7R2R8Bi2329f7QAyMr4a/QcAQC5GX9NliMAICfjr8nbHQHLTfdm/8gBMDfjr4gW2+v/fu3m9d/qHzsA5mT8FZHxB0hkP/6L7eo7hz6wpbEy/gCJGH9FZPwBEjH+isj4AyRi/BWR8QdIxPgrIuMPkIjxV0TGHyAR46+IjD9AIsZfERl/gESMvyIy/gCJGH9FZPwBEjH+isj4AyRi/BWR8QdIxPgrIuMPkMgb773xs8ZfU2f8ARIx/orI+AMkYvwVkfEHSMT4KyLjD5CI8VdExh8gEeOviIw/QCLGXxEZf4BEjL8iMv4AiRh/RWT8ARIx/orI+AMkYvwVkfEHSMT4KyLjD5CI8VdExh8gkf34L7fXf33oA1saK+MPkIjxV0TGHyAR46+IjD9AIsZfERl/gESMvyIy/gCJGH9FZPwBEjH+isj4AyRi/BWR8QdIxPgrIuMPkIjxV0TGHyAR46+IjD9AIsZfERl/gESMvyIy/gCJvBj/TffuoQ9saayMP0Aixl8RGX+ARIy/IjL+AIkYf0Vk/AESMf6KyPgDJGL8FZHxB0jE+Csi4w+QiPFXRMYfIBHjr4iMP0Aixl8RGX+ARIy/IjL+AIkYf0Vk/AESMf6KyPgDJLIf/6tt91eHPrClsTL+AIkYf0Vk/AESMf6KyPgDJGL8FZHxB0jE+Csi4w+QiPFXRMYfIBHjr4iMP0Aixl8RGX+ARIy/IjL+AIkYf0Vk/AESMf6KyPgDJGL8FZHxB0jE+Csi4w+QyH78F9vVXx76wJbGyvgDJGL8FZHxB0jE+Csi4w+QiPFXRMYfIBHjr4iMP0Aixl8RGX+ARIy/IjL+AIkYf0Vk/AESMf6KyPgDJGL8FZHxB0jE+Csi4w+QiPFXRMYfIBHjr4iMP0Ai+/Ffbrq/OPSBLY2V8QdIxPgrIuMPkIjxV0TGHyAR46+IjD9AIsZfERl/gESMvyIy/qSxeyDfWnz3+rf7X0KTjL8iMv6ksdys/mR50/3k8fbp/zgCaJXxV0TGnzSG8R8eTkcALTL+isj4k8aT590fvzz+Q44AWmL8FZHxJ427xn/IEUALjL8iMv6k8dD4DzkCqJnxV0TGnzSuttd/dMz4DzkCqJHxV0TGnzROHf8hRwA1eeedd37G+GvqjD9pnDv+Q44AamD8FZHxJ43lZvWHl4z/kCOAkhl/RWT8SWOs8R9yBFAi46+IjD9pjD3+Q44ASmL8FZHxJ42pxn/IEUAJjL8iMv6ksXze/cGU4z/kCCAz46+IjD9pRI3/kCOAjIy/IjL+pBE9/kOOADIx/orI+JPGXOM/5AggA+OviIw/aSy23dfnHP8hRwBzMv6KyPiTRpbxH3IEMAfjr4iMP2lkG/8hRwCRjL8iMv6kcbVZfS3j+A85AojwYvy33bdvP3/SmBl/0sg+/kOOAKZk/BWR8SeNUsZ/yBHAFIy/IjL+pLFcr75a0vgPOQIYk/FXRMafNEod/yFHAGMw/orI+JNG6eM/5AjgEsZfERl/0qhl/IccAZzD+Csi408atY3/kCOAUxh/RWT8SaPW8R9yBHAM46+IjD9p7B7It2se/yFHAPcx/orI+JPG7oF8e7F9+uPbD2mtOQI4xPgrIuNPGrsHsqnxH3IE8DLjr4iMP2ksNtdfaXH8hxwB7Bl/RWT8SaP18R9yBLRtP/5X29W3Dj0b0lgZf9Iw/h/OEdAm46+IjD9pXK1XXzb+H80R0Bbjr4iMP2kY//tzBLTB+Csi408axv+4HAF1M/6KyPiTxu6BfMv4H58joE7GXxEZf9LYPZDG/4wcAXUx/orI+JPG7oE0/hfkCKiD8VdExp80dg+k8R8hR0DZjL8iMv6ksdw8+5LxHy9HQJmMvyIy/qRh/KfJEVAW46+IjD9pGP9pcwSUwfgrIuNPGsY/JkdAbsZfERl/0lisV180/nE5AnLaj/9ic/3nh35m0lgZf9Iw/vPkCMjF+Csi408axn/eHAE5GH9FZPxJ42q7+oLxnz9HwLyMvyIy/qRh/HPlCJiH8VdExp80jH/OHAGxjL8iMv6ksR//3dD86NCDqvlzBMQw/orI+JOG8S8jR8C0jL8iMv6ksdx0bxr/cnIETMP4KyLjTxrGv8wcAeMy/orI+JOG8S87R8A4jL8iMv6ksVxff974l58j4DLGXxEZf9Iw/nXlCDiP8VdExp80jH+dOQJOsx//3fv2Z7ffR2nMjD9pGP+6cwQcx/grIuNPGsa/jRwB9zP+isj4k8Ziu/qc8W8nR8Bhxl8RGX/SMP5t5gj4MOOviIw/aRj/tnMEvM/4KyLjTxpXm+6zxl+tHwHGXxEZf9Iw/nq5Vo8A46+IjD9pGH8dqrUjwPgrIuNPGsv1s88Yf91VK0eA8VdExp80jL+OqfYjwPgrIuNPGsZfp1TrEWD8FZHxJ439+C9vuh8eelClu6rtCDD+isj4k4bx1yXVcgT04/+nt/990pgZf9J48nz1aeOvSyv9CDD+isj4k4bx15iVegQYf0Vk/EnD+GuKSjsCjL8iMv6kYfw1ZaUcAcZfERl/UlluuncPPajSWGU/Aoy/IjL+pPPoe48+ttyu1oceWGmssh4Bxl8RGX/ScgQoomxHgPFXRMaf9BwBiijLEWD8FZHxpxiOAEU09xFg/BWR8ac4jgBFNNcRYPwVkfGnWI4ARRR9BBh/RWT8KZ4jQBFFHQHGXxEZf6rhCFBEUx8B+/G/2qy+eeh7S2Nl/KmOI0ARTXUEGH9FZPypliNAEY19BBh/RWT8qZ4jQBGNdQQYf0Vk/GmGI0ARXXoEGH9FZPxpjiNAEZ17BBh/RWT8aZYjQBGdegQYf0Vk/GmeI0ARHXsEGH9FZPyh5whQRA8dAcZfERl/uMURoIjuOgKMvyIy/nAHR4Aiun0EGH9FZPzhAY4ARTQcAcZfERl/OJIjQBHtj4Dlpnv30P+Txsr4w4kcAZJKz/jDmRwBkkrN+MOFHAGSSsv4w0gcAZJKyfjDyBwBkrJn/GEijgBJWTP+MDFHgKRsGX8I4giQlCXjD8EcAZLmzvjDTBwBkubK+MPMHAGSojP+kIQjQFJUxh+ScQRImjrjD0k5AiRNlfGH5BwBksbO+EMhHAGSxsr4Q2EcAZIuzfhDoRwBks7N+EPhHAGSTs34QyUcAZKOzfhDZRwBkh7K+EOlHAGS7sr4Q+UcAZJuZ/yhEfsjYLHpNoc+CCS1lfGHxjgCJBl/aJQjQGo34w+NcwRI7WX8gRccAVI7GX/gQxwBUv0Zf+AgR4BUb8YfuJcjQKov4w8cxREg1ZPxB07iCJDKz/gDZ3EESOVm/IGLOAKk8jL+wCgcAVI5GX9gVI4AKX/GH5iEI0DKm/EHJuUIkPJl/IEQjgApT8YfCOUIkObP+AOzcARI82X8gVk5AqT4jD+QgiNAisv4A6k4AqTpM/5ASo4AabqMP5CaI0AaP+MPFMERII2X8QeK4giQLs/4A0VyBEjnZ/yBojkCpNMz/kAVHAHS8Rl/oCqOAOnhjD9QJUeAdHfGH6iaI0D6aMYfaIIjQPppxh9oiiNAMv5AoxwBajnjDzTNEaAWM/4AO44AtZTxB3iJI0AtZPwBDnAEqOaMP8A9HAGqMeMPcARHgGrK+AOcwBGgGjL+AGdwBKjkjD/ABRwBKjHjDzCCV7/x6scdASol4w8wIkeASsj4A0zAEaDMGX+ACTkClDHjDxDAEaBMGX+AQI4AZcj4A8zAEaA5M/4AM3IEaI6MP0ACjgBFZvwBEnEEKCLjD5CQI0BTZvwBEnMEaIqMP0ABHAEaM+MPUBBHgMbI+AMUyBGgSzL+AAVzBOicjD9ABRwBOiXjD1ARR4COyfgDVMgRoPsy/gAVcwToUMYfoAGOAL2c8QdoiCNA+4w/QIMcAW1n/AEa5ghoM+MPgCOgsYw/AB9wBLSR8QfgIxwBdWf8AbiTI6DOjD8AD3IE1JXxB+BojoA6Mv4AnMwRUHbGH4CzOQLKzPgDcDFHQFkZfwBG4wgoI+MPwOgcAbkz/gBMxhGQM+MPwOQcAbky/gCEcQTkyPgDEM4RMG/GH4DZOALmyfgDMDtHQGzGH4A0HAExGX8A0tkfAVfrbntouHR5xh+AtBwB02T8AUjPETBuxh+AYjgCxsn4A1AcR8BlGX8AiuUIOC/jD0DxHAGnZfwBqIYj4LiMPwDVcQTcn/EHoFqOgMMZfwCq5wj4cMYfgGY4At7P+APQnNaPAOMPQLNaPQKMPwDNa+0IMP4A0GvlCDD+AHBL7UeA8QeAO9R6BBh/AHhAbUeA8QeAI9VyBBh/ADhR6UeA8QeAM5V6BBh/ALhQaUfA43X3X4+++/Q3+5cPAJyrlCNgP/6Pt6vf6F82AHCpAo6AHxh/AJhA4iPgB0/ee/br/csEAMaW7whYfd/4A0CAPEfA6vuv/c1rv9a/LABganMfAYv10/80/gAwg7mOAOMPADOLPgIeb7v/eLS9/tX+2wMAc4k6Aow/ACQTcAT8++Km+5X+2wEAWUx2BKyv/834A0Biox8Bu/F/8rev/3L/5QGArMY6Ahbb7l8/tf3UL/VfFgDI7tIj4PG2+xfjDwAFOvcIMP4AULiTj4Cb1T9/4r3rX+z/OgBQqqOPgM3TfzL+AFCRB4+A3fg//rvXf6H/4wBALe46Ahbb7h+NPwBU7PYRYPwBoBHDEfD4pvuHTz7/5M/3vw0A1G5/BHzi73/n5/pfAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJBXXvl/vG1zC5+AIRYAAAAASUVORK5CYII=">
+                            </h4>
+                            Document
+                            <pre id="certificateDocument-json"></pre>
+
+                            <p class="success-text">Certificate created with <a target="_blank"
+                                    href="https://openbadgespec.org/">valid format</a></p>
+                            <hr>
+                            <h4 id="signature"><b>Check 2: </b> Signatures <img
+                                    src="data:image/png;base64,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">
+                            </h4>
+                            <div>
+                                Verification
+                                <pre id="verification-json"></pre>
+                                <!-- <br>Signature  &nbsp;&nbsp; <pre id="signature-json"></pre> -->
+
+
+                                <p class="invalid-text">Certificate not signed</p>
+                                <div class="Certificate-btn-sign">
+                                    <div><button type="button" class="btn-sign btn btn-danger">SIGN</button></div>
+                                    <div><button type="button" class="btn-share btn btn-danger">Share to sign</button>
+                                    </div>
+                                </div>
+                                <p></p>
+                            </div>
+                            <hr>
+                            <h4 id="registered"><b>Check 3: </b>Public Blockchain <img
+                                    src="data:image/png;base64,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">
+                            </h4>
+                            <p class="invalid-text">Certificate not registered</p>
+                            <hr>
+                            <h4 class="Certificate-status"> Status: <a>created</a> <img src=""></h4>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="Certificate-div-info">
+                    <p><b>ID:</b> Device001 Integrity check</p>
+                    <p><b>Badge Name:</b> Decice001 Verified</p>
+                    <p><b>Badge Description:</b> Certificate of integrity for Device001 - 20200209192000</p>
+                    <b>Badge Content:</b>
+                    Asset
+                    <pre id="asset-json"></pre>
+
+                    <p><b>Issued on:</b> 2020-06-09T17:28:37.673Z</p>
+                    <p><b>Issued by:</b> did:telefonica:admin0000000</p>
+                    <p><b>Hash:</b> N9EahV9NunHVSSxvpH4BiXuPp/m/NEc0anjwtvJtLbA=</p>
+                </div>
+                <div class="Certificate-div-buttons">
+			<button onclick="window.open('http://virtualtrust.io/demos/IoTcheck/')" class="btn-share">View</button>
+			<button onclick="window.open('http://virtualtrust.io/demos/IoTcheck/Certificate.pdf')" class="btn-share">Download PDF</button>
+			<button onclick="window.open('http://virtualtrust.io/demos/IoTcheck/Certificate.json')" class="btn-share">Download JSON</button>
+			<button >google</button>
+		</div>
+                <div class="Certificate-div-history">
+                    <h4>History of transactions</h4>
+                    <div>
+                        <div><br>
+                            <li>
+                                Transaction 1: CREATED - 2da5b6e9f278be69c8978b2ed92...
+                                <pre id="transaction1-json"></pre>
+                            </li>
+                            <br><br>
+                        </div>
+                    </div>
+                </div><br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                <div class="Footer-div">
+                    <div class="App-divlogo"></div>
+                    <h3> Blockchain - Telefónica</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>!function (e) { function t(t) { for (var n, c, i = t[0], a = t[1], f = t[2], p = 0, s = []; p < i.length; p++)c = i[p], Object.prototype.hasOwnProperty.call(o, c) && o[c] && s.push(o[c][0]), o[c] = 0; for (n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]); for (l && l(t); s.length;)s.shift()(); return u.push.apply(u, f || []), r() } function r() { for (var e, t = 0; t < u.length; t++) { for (var r = u[t], n = !0, i = 1; i < r.length; i++) { var a = r[i]; 0 !== o[a] && (n = !1) } n && (u.splice(t--, 1), e = c(c.s = r[0])) } return e } var n = {}, o = { 1: 0 }, u = []; function c(t) { if (n[t]) return n[t].exports; var r = n[t] = { i: t, l: !1, exports: {} }; return e[t].call(r.exports, r, r.exports, c), r.l = !0, r.exports } c.m = e, c.c = n, c.d = function (e, t, r) { c.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r }) }, c.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, c.t = function (e, t) { if (1 & t && (e = c(e)), 8 & t) return e; if (4 & t && "object" == typeof e && e && e.__esModule) return e; var r = Object.create(null); if (c.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e) for (var n in e) c.d(r, n, function (t) { return e[t] }.bind(null, n)); return r }, c.n = function (e) { var t = e && e.__esModule ? function () { return e.default } : function () { return e }; return c.d(t, "a", t), t }, c.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, c.p = "/certs/"; var i = this["webpackJsonpreact-certificates"] = this["webpackJsonpreact-certificates"] || [], a = i.push.bind(i); i.push = t, i = i.slice(); for (var f = 0; f < i.length; f++)t(i[f]); var l = a; r() }([])</script>
+
+    <script>
+        var certificateDocument = {
+            "@context": [
+                "https://w3id.org/openbadges/v2"
+            ],
+            "badge": {
+                "asset": asset,
+                "criteria": {
+                    "id": "https://XXXXXXXXXXX-certification.com",
+                    "narrative": "Pass the XXXXXXXXXXX certification test"
+                },
+                "description": "Certificate of integrity for Device001 - 20200209192000",
+                "id": "Device001 Integrity check",
+                "image": "https://images.unsplash.com/photo-1553341640-6b28ff92098a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+                "issuer": {
+                    "description": "Telefónica is a company that is aware of the new challenges posed by today’s society. This is why we offer the means to facilitate communication between people, providing them with the most secure and state of the art technology in order for them to live better, and for them to achieve whatever they resolve.",
+                    "email": "support@telefonica.com",
+                    "id": "did:telefonica:admin0000000",
+                    "image": "https://www.telefonica.com/documents/737979/141136490/TEL_logo_color_neg_thumb.jpg",
+                    "name": "Telefónica",
+                    "publicKeys": [
+                        {
+                            "controller": "did:example:123456789aasdfbzxcv",
+                            "id": "did:telefonica:admin0000000#keys-1",
+                            "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n",
+                            "type": "RsaVerificationKey2018"
+                        }
+                    ],
+                    "type": "Profile",
+                    "url": "https://www.telefonica.com/"
+                },
+                "name": "Decice001 Verified",
+                "subtitle": "SUBTITLE",
+                "type": "BadgeClass"
+            },
+            "blockchain": "Ethereum",
+            "expires": "",
+            "id": "https://bteam.virtualtrust.io/certs/certificate/Device001 Integrity check}",
+            "issuedOn": "2020-06-09T17:28:37.673Z",
+            "recipient": {
+                "hashed": false,
+                "identity": "XXXXXXXXXXX@telefonica.com",
+                "type": "email"
+            },
+            "type": "Assertion",
+            "verification": {
+                "creator": [
+                    "did:vtn:trustid:0cac5ca962489eb239c308fb83dc49df292010ace1ad8b6364ebb7f3304e9371"
+                ],
+                "type": "SignedBadge"
+            }
+        };
+        $('#certificateDocument-json').jsonViewer(certificateDocument, { collapsed: true, withQuotes: false, withLinks: false });
+
+
+        var verification = {
+            "creator": [
+                "did:vtn:trustid:0cac5ca962489eb239c308fb83dc49df292010ace1ad8b6364ebb7f3304e9371"
+            ],
+            "type": "SignedBadge"
+        };
+        $('#verification-json').jsonViewer(verification, { collapsed: true, withQuotes: false, withLinks: false });
+
+
+        var signature = {};
+        $('#signature-json').jsonViewer(signature, { collapsed: true, withQuotes: false, withLinks: false });
+
+        var asset = {
+            "assetId": "Device001",
+            "data": {
+                "company": "ACME",
+                "model": "Open source V2",
+                "serial number": "ASX26547"
+            },
+            "datetime": 1591723346,
+            "hash": "JDfWaQlek+lgjgvX174/q94daN3Oj2zDIoS7vfKSUYM=",
+            "hfTxId": "1c9c5c48fcaaad32245b6823b21377a63bb48ba0f0535ce97c60d289e84766fb",
+            "metadata": {
+                "checksum": {
+                    "type": "SHA-256",
+                    "value": "o9931ba401241281f7c2d32b783746529bb054149792abdbd3f2d6ce09454e20"
+                },
+                "software": {
+                    "kernel version": "5.6",
+                    "release date": "2020-04-16",
+                    "size": "6492 MB",
+                    "version": "April 2020"
+                }
+            },
+            "userOwner": "test:telefonicaMSP"
+        };
+        $('#asset-json').jsonViewer(asset, { collapsed: true, withQuotes: false, withLinks: false });
+
+        var transaction1 = {
+            "assetId": "Device001 Integrity check",
+            "data": certificateDocument,
+            "datetime": 1591723717,
+            "hash": "N9EahV9NunHVSSxvpH4BiXuPp/m/NEc0anjwtvJtLbA=",
+            "hfTxId": "2da5b6e9f278be69c8978b2ed92f893480092ee15e886c960ec87d8437e9c1e4",
+            "metadata": {
+                "status": "created"
+            },
+            "userOwner": "test:telefonicaMSP",
+        };
+        $('#transaction1-json').jsonViewer(transaction1, { collapsed: true, withQuotes: false, withLinks: false });
+
+    </script>
+</body>
+
+</html>

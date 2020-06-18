@@ -64,7 +64,7 @@
     <div style="display: flex; flex-direction:row;">
        <div style="flex:1; margin-left:20px;">
 	    <h1>Device Integrity Blockchain Service</h1>
-            <p>In relation to the device with ID <span style="background-color:#00edff">[AssetID]</span> monitored by the <bold>TrustOS</bold> platform, <span style="background-color:#00edff">[#tsn]</span> events were processed in the reference time interval. Detailed info for verifying the transactions can be found in the table below.</p> 
+            <p>In relation to the device with ID <i>[Device001]</i> monitored by the <bold>TrustOS</bold> platform, <strong>3</strong> events were processed in the reference time interval. Detailed info for verifying the transactions can be found in the table below.</p> 
             <p class="title">Devide data</p>
 	    <p class="field"><b class="key">Company:</b> ACME</p>
 	    <p class="field"><b class="key">Model:</b> Open source V2</p>
@@ -98,9 +98,10 @@
 		</tr>
 	    </tbody></table>
 
-	    <p>Therefore, the status of the device with date <span style="background-color:#00edff">[timestamp_end]</span> can be considered as <span style="background-color:green;color:white">UNTAMPERED</span>. </p>
-	    <p>Therefore, the status of the device with date <span style="background-color:#00edff">[timestamp_end]</span> can be considered as <span style="background-color:red;color:white">TAMPERED</span> since <span style="background-color:#00edff">[MESSAGE]</span>.</p><br>
-	    <p class="foot">You can check all transactions affecting this asset in the reference time range with this HASH code directly on the TrustOS platform: <span style="background-color:#00edff">[HASH_CODE]</span>. </p>
+<!--	    <p>Therefore, the status of the device with date <span style="background-color:#00edff">[timestamp_end]</span> can be considered as <span style="background-color:green;color:white">UNTAMPERED</span>. </p>-->
+	    <p>Therefore, the status of the device with date <i>20/4/2020 13:15:00</i> can be considered as <span style="background-color:red;color:white">TAMPERED</span>. </p>
+        <p>REASON: <i>The value of the checksum code does not match the expected value in at least one of the transactions processed in the interval. </i>.</p><br>
+	    <p class="foot">You can check all transactions affecting this asset in the reference time range with this HASH code directly on the TrustOS platform: [<a href="https://etherscan.io/tx/0x8f7f6a729bdbf84ccc8c5691cb776678c6714e6d94320c6b5b0ea6639a9c29a2" target="_blank">0x8f7f6a729bdbf84ccc8c5691cb776678c6714e6d94320c6b5b0ea6639a9c29a2</a>]. </p>
 	    <hr>
         </div>
     </div>

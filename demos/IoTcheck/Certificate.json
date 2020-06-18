@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "https://w3id.org/openbadges/v2"
+    ],
+    "badge": {
+        "asset": asset,
+        "criteria": {
+            "id": "https://XXXXXXXXXXX-certification.com",
+            "narrative": "Pass the XXXXXXXXXXX certification test"
+        },
+        "description": "Certificate of integrity for Device001 - 20200209192000",
+        "id": "Device001 Integrity check",
+        "image": "https://images.unsplash.com/photo-1553341640-6b28ff92098a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "issuer": {
+            "description": "Telefónica is a company that is aware of the new challenges posed by today’s society. This is why we offer the means to facilitate communication between people, providing them with the most secure and state of the art technology in order for them to live better, and for them to achieve whatever they resolve.",
+            "email": "support@telefonica.com",
+            "id": "did:telefonica:admin0000000",
+            "image": "https://www.telefonica.com/documents/737979/141136490/TEL_logo_color_neg_thumb.jpg",
+            "name": "Telefónica",
+            "publicKeys": [
+                {
+                    "controller": "did:example:123456789aasdfbzxcv",
+                    "id": "did:telefonica:admin0000000#keys-1",
+                    "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n",
+                    "type": "RsaVerificationKey2018"
+                }
+            ],
+            "type": "Profile",
+            "url": "https://www.telefonica.com/"
+        },
+        "name": "Decice001 Verified",
+        "subtitle": "SUBTITLE",
+        "type": "BadgeClass"
+    },
+    "blockchain": "Ethereum",
+    "expires": "",
+    "id": "https://bteam.virtualtrust.io/certs/certificate/Device001 Integrity check}",
+    "issuedOn": "2020-06-09T17:28:37.673Z",
+    "recipient": {
+        "hashed": false,
+        "identity": "XXXXXXXXXXX@telefonica.com",
+        "type": "email"
+    },
+    "type": "Assertion",
+    "verification": {
+        "creator": [
+            "did:vtn:trustid:0cac5ca962489eb239c308fb83dc49df292010ace1ad8b6364ebb7f3304e9371"
+        ],
+        "type": "SignedBadge"
+    }
+}

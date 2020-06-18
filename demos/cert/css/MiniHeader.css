@@ -1,0 +1,61 @@
+.MiniHeader-div {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    /* min-height: 8vh; */
+    padding: 5px;
+    padding-left:20px;
+    margin: 0px;
+    font-size: 200px;
+    text-align: left;
+    /* border-bottom: solid 1px; */
+}
+
+.MiniHeader-div.smaller {
+    background: rgb(37, 147, 181);
+    background: -moz-linear-gradient(131deg, rgba(37, 147, 181, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%), url(../images/trust-background.jpg) cover no-repeat;
+    background: -webkit-linear-gradient(131deg, rgba(37, 147, 181, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%), url(../images/trust-background.jpg) cover no-repeat;
+    background: linear-gradient(131deg, rgba(37, 147, 181, 0.6) 0%, rgba(255, 255, 255, 0.1) 100%), url(../images/trust-background.jpg) no-repeat;
+    background-size: 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2593b5", endColorstr="#ffffff", GradientType=1);
+    margin: 0px;
+}
+
+.MiniHeader-div h3 {
+    font-family: 'TelefonicaCap-Regular';
+    color: white;
+    top: 10px;
+    left: 10px;
+    flex: 2;
+    font-size: 1.5rem;
+    padding:0px;
+    margin:auto;
+}
+
+.MiniHeader-div-menu {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex: 1.8;
+    align-self:center;
+}
+
+.MiniHeader-div-menu a {
+    font-size: min(calc(1vw + 1vh), 18px);
+    flex: 1;
+    color: white;
+    align-self: baseline;
+}
+
+.MiniHeader-div-menu a:hover {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color:#00edff;
+}
+
+.MiniHeader-div a {
+    cursor: pointer;
+}

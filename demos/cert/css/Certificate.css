@@ -1,0 +1,145 @@
+.Certificate-div {
+    margin: 12vh 10% 5%;
+}
+
+.Certificate-div-title {
+    text-align: center;
+}
+
+.Certificate-div-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.Certificate-div-row-image {
+    /* align-self: center; */
+    /* flex: 1.2; */
+    min-width: 40%;
+    width: 40%;
+}
+
+.Certificate-div-row-image img {
+    max-width: 100%;
+    align-self: center;
+}
+
+.Certificate-div-row-checks {
+    text-align: left;
+    align-self: center;
+    width: 60%;
+    margin-left: 2em;
+}
+
+.Certificate-div-row-checks img {
+    max-width: 40px;
+    float: right;
+    opacity:0.9;
+}
+
+.Certificate-div-info b {
+    background-color: rgb(247, 245, 245);
+    padding: 5px;
+}
+
+.Certificate-div-buttons {
+    text-align: right;
+}
+
+.Certificate-div-history {
+    background-color: rgb(252, 252, 252);
+    margin-top: 40px;
+    padding: 2%;
+    border: solid 0.5px;
+}
+
+.Certificate-div-loading {
+    text-align: center;
+    align-self: center;
+    margin: 25vh auto;
+    max-width: 100px;
+}
+
+.Certificate-status {
+    font-family: TelefonicaCap-Regular;
+    color: #2593B5;
+    font-size: 1.4rem;
+}
+
+.Certificate-status a {
+    font-family: TelefonicaCap-Regular;
+    color: #2593B5;
+}
+
+.Certificate-btn-sign {
+    display: flex;
+    /* flex */
+}
+
+/* Text wrap */
+
+.truncate {
+    width: 380px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+hr {
+    border: 1px solid #2693b514;
+}
+
+.success-text {
+    background-color: #49cc9134;
+    padding: 5px;
+    padding-left: 10px;
+    max-width: 450px;
+
+}
+
+.invalid-text {
+    background-color: #fe0e0714;
+    padding: 5px;
+    padding-left: 10px;
+    max-width: 450px;
+
+}
+
+/* Logos */
+
+#document {
+    font-size: 1.3rem;
+    background-image: url('../images/document.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 420px;
+}
+
+#signature {
+    font-size: 1.3rem;
+    background-image: url('../images/sign.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 420px;
+}
+
+#registered {
+    font-size: 1.3rem;
+    background-image: url('../images/register.png');
+    background-size: 33px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 420px;
+}

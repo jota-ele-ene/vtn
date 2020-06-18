@@ -1,0 +1,132 @@
+.App {}
+
+/* FONTS */
+@font-face {
+  font-family: Telefonica;
+  src: url("./fonts/Telefonica-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Telefonica-Light;
+  src: url("./fonts/Telefonica-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Telefonica-ExtraLight;
+  src: url("./fonts/Telefonica-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: TelefonicaCap-Regular;
+  src: url("./fonts/TelefonicaCap-Regular.otf") format("opentype");
+}
+
+/* BUTTONS */
+
+.btn-link {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: rgba(238, 238, 238, 0.055);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: min(calc(1vw), 13px);
+  font-weight: 500;
+  border-radius: 4px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  line-height: 1;
+  color: white;
+  border-color: #eee;
+}
+
+.btn-link:hover {
+  color: white;
+  background-color: #003245;
+  border-color: #003245;
+  cursor: pointer;
+}
+
+.btn-link:active {
+  color: rgba(255, 255, 255, 0.678);
+  background-color: #003245;
+}
+
+.btn-sign {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: rgba(240, 158, 158, 0.055);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: min(calc(1vw), 13px);
+  font-weight: 500;
+  border-radius: 4px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  line-height: 1;
+  color: rgb(180, 71, 71);
+  border-color: rgb(180, 71, 71);
+}
+
+.btn-sign:hover {
+  color: white;
+  background-color: rgb(180, 71, 71);
+  border-color: rgb(180, 71, 71);
+  cursor: pointer;
+}
+
+.btn-sign:active {
+  color: white;
+  background-color: rgb(180, 71, 71);
+}
+
+.btn-share {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: rgb(37, 147, 181);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: min(calc(1vw), 13px);
+  font-weight: 500;
+  border-radius: 4px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  color: white;
+  border-color: rgb(37, 147, 181);
+  
+}
+/* color: black;
+    background-color: #00edff;
+    border-color: #00edff;
+    cursor: pointer; */
+
+.btn-share:hover {
+  color: #00EDFF;
+  background-color: #003245;
+  border-color: #003245;
+  cursor: pointer;
+}
+
+.btn-share:active {
+  color: white;
+  background-color: #2593B5;
+}
+
+.btn-share:focus {
+  color: white;
+  background-color: #2593B5;
+  border-color: rgba(0, 238, 255, 0.384);
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
