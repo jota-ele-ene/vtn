@@ -128,7 +128,7 @@ input.form-control {
 }
 
 #issuer {
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 20px;
     width: 90%;
     max-width: 800px;
@@ -430,6 +430,10 @@ ul.verifying {
     .verify img {
         margin-top: 30px;
         margin-bottom: 20px;
+    }
+    #video {
+        width:320px;
+        height:180px;
     }
 }
 
