@@ -13,18 +13,18 @@ function renderResponse(i, len, data) {
         total = len - 1;
         message = data.name;
         value = data.status;
-        if (i != len - 1) {
+        if (i != len ) {
             $("#progress-msg").html($("#progress-msg").html() + 'Step ' + count.toString() + ' of ' + total.toString() + "... " + message + '</span>');
             $("#progress-msg").html($("#progress-msg").html() + ' [' + markMappings[value] + ']<br>')
         }
         setTimeout(function () {
             if (i == len - 1) {
                 if (value == "passed" || value == "done") {
-                    $("#progress-msg").html($("#progress-msg").html() + "<br>Success! The certificate has been verified with TrustOS.")
+                    $("#progress-msg").html($("#progress-msg").html() + "<br>Success! The certificate has been verified with Blockchain.")
                     $("#verified").show();
                 }
                 else {
-                    $("#progress-msg").html($("#progress-msg").html() + "Oops! The certificate could not be verified with TrustOS.");
+                    $("#progress-msg").html($("#progress-msg").html() + "Oops! The certificate could not be verified with Blockchain.");
                     if (brokenseal) {
                         mssg = brokenSealMssg("CUIDADO! ESTE PRODUCTO PARECE ORIGINAL PERO OTRA PERSONA LO ABRIO ANTES EL ");
                         $("#progress-msg").html($("#progress-msg").html() + "<br><b><font color=\"red\">" + mssg + datetimeString + "</b></font>");
@@ -40,7 +40,7 @@ function renderResponse(i, len, data) {
     }, timeDelay * i);
 }
 
-timeDelay = 140;
+timeDelay = 180;
 markMappings = { "passed": "PASS", "failed": "FAIL", "done": "DONE", "not_started": "NOT STARTED" }
 
 $(document).ready(function () {
