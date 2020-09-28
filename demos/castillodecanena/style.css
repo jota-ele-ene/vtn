@@ -40,7 +40,11 @@
     /*padding: 5rem;*/
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 800px!important;
+}
+
+.premio {
+    float: left;
 }
 
 /* Custom default button */
@@ -246,6 +250,7 @@ input[type=radio]+.lbl.padding-8::before {
     border: none;
     outline: none;
     transition: 0.4s;
+    font-weight:bold;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
