@@ -1,0 +1,639 @@
+/* --------------------------------     styles for index.html pages ------------------------------- */
+
+#mobile-menu-trigger {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: block;
+    padding-top: 10px;
+    padding-right: 25px;
+    margin-top: 0;
+    color: #a0be76;
+    font-size: 130%;
+}
+
+.fa {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.verified {
+    color: rgba(0, 0, 0, .6);
+    display: block;
+    font-size: 12px;
+    margin-left: -16px;
+}
+
+.success {
+    background-repeat: no-repeat;
+    background-size: 17px;
+    margin-left: 8px;
+    padding-left: 20px;
+}
+
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    /*padding: 5rem;*/
+    position: relative;
+    width: 100%;
+    max-width: 800px!important;
+}
+
+.premio {
+    float: left;
+}
+
+/* Custom default button */
+
+.btn-default, .btn-default:hover, .btn-default:focus {
+    color: #fff;
+    text-shadow: none;
+    /* Prevent inheritence from `body` */
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 0px;
+}
+
+.font-light {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.font-bold {
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.long-word {
+    word-wrap: break-word;
+}
+
+.btn-margin {
+    margin-top: 10px;
+}
+
+.errors {
+    color: #8B0000;
+}
+
+.notice-text {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+.heading {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.description {
+    line-height: 1.3;
+    margin-top: -4px;
+}
+
+.hash {
+    line-height: 1.2;
+}
+
+.form-text {
+    margin-top: 5px;
+}
+
+.show-later {
+    display: none;
+}
+
+.no-padding-col {
+    padding: 0px;
+}
+
+.radio-label {
+    font-size: 18px;
+    padding-left: 0px !important;
+}
+
+.radio-error {
+    margin-top: -12px;
+}
+
+.name {
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+input.form-control {
+    -webkit-appearance: none;
+}
+
+#issuer {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    word-break: break-all;
+    font-size: x-small;
+}
+
+#footer {
+    font-size: x-small;
+    font-weight: lighter;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Hiding default checkbox and Radio button design */
+
+input[type=radio] {
+    height: 18px;
+    opacity: 0;
+    position: absolute;
+    width: 18px;
+    z-index: 12;
+}
+
+/* Disable outline when clicked*/
+
+input[type=radio]:checked, input[type=radio]:focus {
+    outline: none !important;
+}
+
+input[type=radio]+.lbl {
+    display: inline-block;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 0;
+    min-height: 14px;
+    min-width: 14px;
+    position: relative;
+    z-index: 11;
+}
+
+/* Basic Checkbox styles */
+
+input[type=radio]+.lbl::before {
+    border-radius: 0;
+    content: url('../img/radio.png');
+    display: inline-block;
+    height: 13px;
+    line-height: 1px;
+    margin-right: 1px;
+    margin-top: -7px;
+    min-width: 13px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Checked state styles */
+
+input[type=radio]:checked+.lbl::before {
+    background-color: #F5F8FC;
+    border-color: #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    content: url('../img/radio-selected.png');
+    display: inline-block;
+}
+
+/* Hover state styles */
+
+input[type=radio]:hover+.lbl::before, input[type=radio]+.lbl:hover::before {
+    border-color: #1c7aad;
+}
+
+/* Shadow when checked or Active */
+
+input[type=radio]:active+.lbl::before, input[type=radio]:checked:active+.lbl::before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled state styles */
+
+input[type=radio]:disabled+.lbl::before, input[type=radio][disabled]+.lbl::before, input[type=radio].disabled+.lbl::before {
+    background-color: #DDD !important;
+    border-color: #CCC !important;
+    box-shadow: none !important;
+    color: #BBB;
+}
+
+/* Styles for Radio button */
+
+input[type=radio]+.lbl::before {
+    border-radius: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+}
+
+input[type=radio]:checked+.lbl::before {
+    content: url('../img/radio-selected.png');
+}
+
+input[type=radio]+.lbl.padding-8::before {
+    margin-right: 8px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+.accordion {
+    background-color: white;
+    color: #646466;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-weight:bold;
+}
+
+/* Style de table detail */
+
+.table-detail {
+    border-top: 1px solid #DADADC;
+    border-bottom: 1px solid #DADADC;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active, .accordion:hover {
+    color: #a0be76;
+    outline: none;
+    border-color: #a0be76;
+}
+
+#no-outline {
+    outline: none;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+
+.header {
+    margin: 20px;
+}
+
+.header-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.header-input img {}
+
+.div-lateral {}
+
+.info {
+    max-width: 800px;
+    margin: auto;
+}
+
+.panel {
+    font-size: 80%;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel table {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.receta {
+    overflow: hidden;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: horizontal;
+    align-items: baseline;
+}
+
+.destacada {
+    margin-right: 10px;
+}
+
+@media print {
+    div.divToPrint {
+        background-color: white;
+        margin: 0;
+        position: fixed;
+    }
+    .container {
+        size: 297mm 210mm;
+        margin: 50px;
+        zoom: 50%;
+    }
+    #logo {
+        width: 100px;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+    .hide-on-print {
+        display: none;
+    }
+    header, footer {
+        display: none;
+    }
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@page {
+    size: 297mm 210mm portrait;
+    /* auto is the initial value */
+    margin: 0;
+    /* this affects the margin in the printer settings */
+}
+
+.issuer-logo {
+    margin-bottom: 30px;
+    max-width: 350px;
+}
+
+.issuer-logo img {
+    width: 100%;
+}
+
+.done-verifying {
+    text-align: center;
+    top: 48px;
+}
+
+.verify {
+    font-size: 2.6rem;
+    margin: 20px 0 20px 0;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.verify img {
+    margin-top: 20px;
+}
+
+.verify p {
+    margin-bottom: 10px;
+}
+
+.verified, .not-verified {
+    color: #000;
+    display: inline;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.not-verified {
+    color: #D80028;
+}
+
+ul.verifying {
+    border-bottom: 1px solid #eee;
+    list-style-type: none;
+    margin-bottom: 24px;
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+.issuer-id, .blockchain-address {
+    font-size: 1.3rem;
+}
+
+#verified, #not-verified {
+    display: none;
+}
+
+#progress-msg {
+    display: none;
+}
+
+/* mobile devices */
+
+@media only screen and (max-width: 768px) {
+    .header-input {
+        flex-direction: column;
+    }
+    .verify {
+        max-width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .verify img {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    #video {
+        width:320px;
+        height:180px;
+    }
+}
+
+/* large devices */
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+/* --------------------------------     styles for award.html pages ------------------------------- */
+
+.certificate-meta, .certificate-name, .issuer-name {
+    font-size: 1.85rem;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    display: block;
+}
+
+.certificate-meta {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin: 3px 0px 3px 0px;
+}
+
+.description {
+    line-height: 1.4;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+#signature-img {
+    margin-bottom: 50px;
+    width: 25%;
+}
+
+.signature-info {
+    line-height: 1.2;
+}
+
+#qrCode {
+    max-width: 35%;
+}
+
+.qrCode img {
+    max-width: 160px;
+}
+
+.customTxt1 {
+    line-height: 1.4;
+}
+
+.customTxt2 {
+    line-height: 1.4;
+}
+
+.customTxt3 {
+    line-height: 1.4;
+}
+
+.customTxt4 {
+    line-height: 1.4;
+}
+
+.customImg1 img {
+    max-width: 100%;
+}
+
+.customImg2 img {
+    max-width: 25%;
+}
+
+.customImg3 img {
+    max-width: 25%;
+}
+
+.customImg4 img {
+    max-width: 25%;
+}
+
+#verify-button {
+    margin-right: 5px;
+    font-size: 3rem;
+    width: 85%;
+    height: 80%;
+    border: none;
+    background-color: #e40613;
+    color: white;
+}
+
+#verify-button:focus {
+    margin-right: 5px;
+    background-color: dimgray;
+}
+
+#verify-button-interoleo {
+    margin-right: 5px;
+    font-size: 2rem;
+    width: 85%;
+    height: 80%;
+    border: none;
+    background-color: #d9a302;
+    color: white;
+}
+
+#verify-button-interoleo:focus {
+    margin-right: 5px;
+    background-color: dimgray;
+}
+
+#verify-button-AX2 {
+    margin-right: 5px;
+    font-size: 2rem;
+    width: 85%;
+    max-width: 400px;
+    height: 80%;
+    border: none;
+    background-color: #e40613;
+    color: white;
+}
+
+#verify-button-AX2:focus {
+    margin-right: 5px;
+    background-color: dimgray;
+}
+
+#progress-msg {
+    border-bottom: 1px black dashed;
+    display: none;
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 12px;
+    text-align: left;
+}
+
+#verified, #not-verified {
+    display: none;
+}
+
+.issuer-logo {
+    margin-bottom: 30px;
+    max-width: 350px;
+}
+
+.issuer-logo img {
+    width: 100%;
+}
+
+.certificate-owner {
+    margin-bottom: 15px;
+}
+
+.certificate-meta {
+    font-size: 1.85rem;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    line-height: 1.4;
+}
+
+#verified-icon, #not-verified-icon {
+    max-height: 5rem;
+    vertical-align: middle;
+}
+
+.output-txt {
+    line-height: 1.5;
+}
+
+@media print {
+    div.divToPrint {
+        left: 20%;
+        top: 18%;
+        width: 60%;
+    }
+    #issuer-logo {
+        max-width: 750px;
+    }
+    a {
+        text-decoration: none !important;
+    }
+}

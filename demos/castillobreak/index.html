@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Metas  ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Title ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <title>
+        Castillo de Canena - Verified Certificate
+    </title>
+
+    <!-- CSS ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--load all styles -->
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="./verification.js"></script>
+    <!-- <script src="./pdf.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- Content –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div class="header" style="text-align: center;">
+            <img src="https://www.castillodecanena.com/wp-content/uploads/2015/08/logoNuevo.jpg">
+        </div>
+        <div class="container"><h4>RESERVA FAMILIAR</h4><p style="color:#a0be76;">Picual</p></div>
+        <div class="header-input container">
+            <img src="https://www.castillodecanena.com/wp-content/uploads/2013/05/reservafamiliar-picual.jpg">
+            <div class="div-lateral">
+                <p>Castillo de Canena garantiza que la aceituna utilizada para elaborar la botella se recogió el dia
+                    <a style="color:#a0be76;">XX/XX/XXXX</a> y proviene del Pago <a style="color:#a0be76;">XXXXXXXX</a>.
+                </p>
+                <p><strong>Número único de la unidad: </strong><br>4322c1a3-85a1-4bbd-a518-06f376e0b962</p>
+                <div class="verify">
+                    <button id="verify-button-AX2"
+                        value="{&#39;uid&#39;: &#39;e23d0f90-b075-496c-8555-bfce40a70af4&#39;}"
+                        onclick="changeButtonColor()"
+                        style="color:#ffffff;background-color:#a0be76;font-size:50%;">Precinto Digital</button>
+                    <script>
+                        function changeButtonColor() {
+                            document.getElementById("verify-button-AX2").style.backgroundColor = "#696969";
+                        }
+                    </script>
+                    </br>
+                    <span id="verified" class="verified" style="font-size: 100%; display: none;">
+                        <img id="verified-icon" src="./verified.png">OK
+                    </span>
+                    <span id="not-verified" class="not-verified" style="font-size: 100%; display: none;">
+                        <img id="not-verified-icon" src="./not-verified.png">
+                    </span>
+                    <div class="check">
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div>
+                                            <h6 id="progress-msg" style="display: hidden;"></h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                        </tr>
+                        </tbody>
+
+                        </table>
+
+                    </div>
+                    <td align="center" valign="middle">
+                        <button id="verify-button-AX2" onclick="window.open('https://www.castillodecanena.com/es/suscribase-a-nuestra-newsletter/')"
+                            style="color:#ffffff;background-color:#a0be76;font-size:50%;">Subscríbete a nuestra Newsletter</button>
+                    </td>
+                    <td align="center" valign="middle">
+                        <button id="verify-button-AX2" onclick="window.open('https://www.castillodecanena.com/es/')"
+                            style="color:#ffffff;background-color:#a0be76;font-size:50%;">Visita nuestra web</button>
+                    </td>
+                    <td align="center"><br><img src="./qr-code.svg" width="200px" valign="middle"></td>
+                    <td align="center" valign="middle" width="50%">
+                </div>
+            </div>
+        </div>
+         <div class="info container">
+            <p>Durante generaciones ha sido costumbre que lo mejor de las cosechas de cada variedad quedara para la casa
+                en una renombrada Reserva Familiar. </p>
+             <hr></hr>
+ 
+            <!-- INFO CONTENT -->
+            <div>
+                <div class="wpb_accordion_section group" display="outline: none;">
+                    <button id="no-outline" class="accordion">INFORMACIÓN AL CONSUMIDOR</button>
+                    <div class="panel">
+                        <p>Castillo de Canena quiere ofrecer a sus consumidores la máxima garantia sobre el proceso de fabricación 
+                            de sus aceites. Por eso garantizamos con la última tecnología que la siguiente información se ha recopilado 
+                            en origen y describe excrupulosamente la calidad del aceite embotellado que tiene en su mano.</p>
+                        <p><strong>CONTROLES EN CAMPO</strong></p>
+                        <table>
+                            <tbody>
+                                <tr class ="table-detail"><td style="color:#a0be76">Pago/localización</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Fecha y datos plantación</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Marco</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Tipo mecanización</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Suelo</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Automatización riego</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Pluviometría</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Temperaturas máximas y mínimas</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Cubiertas</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Carboolivar</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Huella carbono e hídrica</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Seobirdlife</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Diferenciación Producción Integrada(0 residuos)/Eco/Bio</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Ganadería</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Biodiversidad</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Fecha de recolección</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles de Recolección</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles en recepción</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Transporte con temperatura controlada</td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>CONTROLES EN ALMAZARA</strong></p>
+                        <table>
+                            <tbody>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles en Recepción</td><td>localización en tolva, temperaturas...</td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles en Molienda</td><td>temperaturas, productividad molino...</td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles Batido</td><td>temperaturas, tiempo batido...</td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles Centrifugado Horizontal</td><td>temperaturas, rpm motor...</td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles Centrifugado Vertical</td><td>temperaturas, caudal agua lavado, impurezas/humedad en aceite, rpm motor...</td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles en Almacenamiento y Filtrado</td><td>fecha, localización en depósitos, temperaturas, rpm motor bomba filtro...</td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Controles en envasado</td><td>temperaturas, caudal, soplado envases, inertización, lotes...</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>CONTROL LOGÍSTICO</strong></p>
+                        <table>
+                            <tbody>
+                                <tr class ="table-detail"><td style="color:#a0be76">Lote</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Destino</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Fecha envasado</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Salida de almazara</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Transporte controlado</td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>CONTROL COMERCIAL</strong></p>
+                        <table>
+                            <tbody>
+                                <tr class ="table-detail"><td style="color:#a0be76">Fichas comerciales de cada referencia/hojas de cata</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Certificaciones</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Innovación</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">RSC</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Sostenibilidad</td><td></td></tr>
+                                <tr class ="table-detail"><td style="color:#a0be76">Recetas</td><td></td></tr>
+                            </tbody>
+                        </table>
+
+                     </div>
+                </div>
+
+                <div class="wpb_accordion_section group" display="outline: none;">
+                    <button id="no-outline" class="accordion">NOTAS DE CATA</button>
+                    <div class="panel">
+                        <p><em>Es un frutado verde de aceituna fresca, limpio y fragante. Notas de cata a
+                                <strong>tomate</strong>, <strong>tomatera</strong>, <strong>hierbas
+                                    aromáticas </strong>y el <strong>trigo verde</strong>, y también en
+                                segundo lugar a <strong>almendra verde </strong>y <strong>plátano
+                                    verde</strong>. Toque herbáceo<strong> </strong>que nos recuerda al
+                                <strong>tomillo</strong>.</em></p>
+                        <p><em>Estructura media, equilibrado y armónico.</em></p>
+                        <table>
+                            <tbody>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76">Tipo de Aceituna</td>
+                                    <td>100% Picual</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Calidad</td>
+                                    <td>Virgen Extra</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Fecha de recolección</td>
+                                    <td>Octubre y Noviembre 2019</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Método de recolección</td>
+                                    <td>Mecánica, vibración con paraguas</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Método de extracción</td>
+                                    <td>Máximo 4 horas desde la recolección.<br />
+                                        Centrifugadora Pieralisi Genius III. Temperatura<br />
+                                        de la masa: 20º. No adición de agua</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Almacenamiento</td>
+                                    <td>Acero inoxidable con nitrógeno</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Color</td>
+                                    <td>Verde intenso</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Acidez</td>
+                                    <td>0.12</td>
+                                </tr>
+                                <tr class ="table-detail">
+                                    <td style="color:#a0be76;">Sugerencias de Almacenamiento</td>
+                                    <td>Conservar en un lugar fresco, lejos de la luz y calor</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="wpb_accordion_section group">
+                    <button id="no-outline" class="accordion">PREMIOS</button>
+                    <div class="panel">
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/reserva-familiar-picual-hall-of-fame/"></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/100-puntos-flos-olei-2020/"><img width="150"
+                                    height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2019/10/FLOS_OLEI_2020-150x150.jpg"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2019/10/FLOS_OLEI_2020-150x150.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2019/10/FLOS_OLEI_2020-50x50.jpg 50w, https://www.castillodecanena.com/wp-content/uploads/2019/10/FLOS_OLEI_2020-300x300.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2019/10/FLOS_OLEI_2020-275x275.jpg 275w, https://www.castillodecanena.com/wp-content/uploads/2019/10/FLOS_OLEI_2020.jpg 400w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/gastro-quality-taste-aenor/"><img width="150"
+                                    height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2018/09/AENOR-150x150.jpg"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2018/09/AENOR-150x150.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2018/09/AENOR-50x50.jpg 50w, https://www.castillodecanena.com/wp-content/uploads/2018/09/AENOR-300x300.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2018/09/AENOR-275x275.jpg 275w, https://www.castillodecanena.com/wp-content/uploads/2018/09/AENOR.jpg 512w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/premio-mario-solinas-2018/"></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/mejor-aove-stiftung-warentest/"></a>
+                        </div>
+                        <div class="premio">
+                            <a
+                                href="https://www.castillodecanena.com/es/jaen-seleccion-2018-reserva-familiar-picual/"></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/mejor-aove-del-mundo-2018/"></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/aove-picual-coq-d-or/"><img width="150"
+                                    height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2016/09/Coq_d_Or_HOVE_Castillo_de_Canena-150x150.jpg"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2016/09/Coq_d_Or_HOVE_Castillo_de_Canena-150x150.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2016/09/Coq_d_Or_HOVE_Castillo_de_Canena-50x50.jpg 50w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/leone-oro-maestri-oleari-2016-ganador/"><img
+                                    width="150" height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2016/09/mastri-150x150.jpg"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2016/09/mastri-150x150.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2016/09/mastri-50x50.jpg 50w, https://www.castillodecanena.com/wp-content/uploads/2016/09/mastri-570x570.jpg 570w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/der-feinschmecker-aove-reserva-familiar-oro/"><img
+                                    width="150" height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2014/05/Der-Feinschmecker-150x150.png"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2014/05/Der-Feinschmecker-150x150.png 150w, https://www.castillodecanena.com/wp-content/uploads/2014/05/Der-Feinschmecker-50x50.png 50w, https://www.castillodecanena.com/wp-content/uploads/2014/05/Der-Feinschmecker-300x300.png 300w, https://www.castillodecanena.com/wp-content/uploads/2014/05/Der-Feinschmecker-275x275.png 275w, https://www.castillodecanena.com/wp-content/uploads/2014/05/Der-Feinschmecker.png 450w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/premier-oro-aove-olive-japan-2016/"><img
+                                    width="150" height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2015/04/OLIVE_JAPAN-150x150.jpg"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2015/04/OLIVE_JAPAN-150x150.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2015/04/OLIVE_JAPAN-50x50.jpg 50w, https://www.castillodecanena.com/wp-content/uploads/2015/04/OLIVE_JAPAN-300x300.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2015/04/OLIVE_JAPAN-275x275.jpg 275w, https://www.castillodecanena.com/wp-content/uploads/2015/04/OLIVE_JAPAN.jpg 450w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a
+                                href="https://www.castillodecanena.com/es/aove-reserva-familiar-premio-alimentos-espana/"><img
+                                    width="150" height="85"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2016/04/Alimentos_Espana-150x85.jpg"
+                                    class="attachment-premios" alt="" style="" title="" /></a>
+                        </div>
+                        <div class="premio">
+                            <a
+                                href="https://www.castillodecanena.com/es/nuestros-aove-primera-y-tercera-posicion-en-evooleum/"><img
+                                    width="150" height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2016/02/EVOOLEUM-150x150.png"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2016/02/EVOOLEUM-150x150.png 150w, https://www.castillodecanena.com/wp-content/uploads/2016/02/EVOOLEUM-50x50.png 50w, https://www.castillodecanena.com/wp-content/uploads/2016/02/EVOOLEUM-300x300.png 300w, https://www.castillodecanena.com/wp-content/uploads/2016/02/EVOOLEUM-275x275.png 275w, https://www.castillodecanena.com/wp-content/uploads/2016/02/EVOOLEUM.png 450w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/mario-solinas-aove/"><img width="150"
+                                    height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2016/03/MARIO_SOLINAS-150x150.jpg"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2016/03/MARIO_SOLINAS-150x150.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2016/03/MARIO_SOLINAS-50x50.jpg 50w, https://www.castillodecanena.com/wp-content/uploads/2016/03/MARIO_SOLINAS-300x300.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2016/03/MARIO_SOLINAS-275x275.jpg 275w, https://www.castillodecanena.com/wp-content/uploads/2016/03/MARIO_SOLINAS.jpg 450w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/mejor-producto-aove-aceite-gourmets/"><img
+                                    width="150" height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2016/02/GOURMET-150x150.png"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2016/02/GOURMET-150x150.png 150w, https://www.castillodecanena.com/wp-content/uploads/2016/02/GOURMET-50x50.png 50w, https://www.castillodecanena.com/wp-content/uploads/2016/02/GOURMET-300x300.png 300w, https://www.castillodecanena.com/wp-content/uploads/2016/02/GOURMET-275x275.png 275w, https://www.castillodecanena.com/wp-content/uploads/2016/02/GOURMET.png 450w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                        <div class="premio">
+                            <a href="https://www.castillodecanena.com/es/aove-jaen-seleccion-2016/"><img width="150"
+                                    height="150"
+                                    src="https://www.castillodecanena.com/wp-content/uploads/2016/01/JAEN_SELECCION-150x150.jpg"
+                                    class="attachment-premios" alt="" style="" title=""
+                                    srcset="https://www.castillodecanena.com/wp-content/uploads/2016/01/JAEN_SELECCION-150x150.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2016/01/JAEN_SELECCION-50x50.jpg 50w, https://www.castillodecanena.com/wp-content/uploads/2016/01/JAEN_SELECCION-300x300.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2016/01/JAEN_SELECCION-275x275.jpg 275w, https://www.castillodecanena.com/wp-content/uploads/2016/01/JAEN_SELECCION.jpg 450w"
+                                    sizes="(max-width: 150px) 100vw, 150px" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wpb_accordion_section group">
+                    <button id="no-outline" class="accordion">SUGERENCIAS DE CONSUMO</button>
+                    <div class="panel">
+                        <p>Especial para aliños de ensalada, sopa de tomate, gazpacho, jamón y quesos,
+                            carnes a la brasa.</p>
+                    </div>
+                </div>
+
+                <div class="wpb_accordion_section group">
+                    <button id="no-outline" class="accordion">ULTIMAS RECETA RECOMENDADAS</button>
+                    <div class="panel">
+                        <div class="recetas_ficha">
+                            <div class="receta">
+                                <div class="destacada"><a
+                                        href="https://www.castillodecanena.com/es/anna-chiarini-espaguetis-tinta-sepia-anchoas-pasta-muddica-reserva-familiar-picual/"><img
+                                            width="150" height="100"
+                                            src="https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-150x100.jpg"
+                                            class="attachment-recetas size-recetas wp-post-image" alt=""
+                                            srcset="https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-150x100.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-300x200.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-1024x683.jpg 1024w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-768x512.jpg 768w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-1536x1024.jpg 1536w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-2048x1365.jpg 2048w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Pasta_Muddica_Chiarini_Castillo_de_Canena_olive_oil-275x183.jpg 275w"
+                                            sizes="(max-width: 150px) 100vw, 150px" /></a></div>
+                                <a style="color:#a0be76"
+                                    href="https://www.castillodecanena.com/es/anna-chiarini-espaguetis-tinta-sepia-anchoas-pasta-muddica-reserva-familiar-picual/">Anna
+                                    Chiarini: Espaguetis de tinta de sepia y anchoas (pasta muddica) con AOVE
+                                    Reserva Familiar Picual</a>
+                            </div>
+                            <div class="receta">
+                                <div class="destacada"><a
+                                        href="https://www.castillodecanena.com/es/cuadritos-de-frijoles-y-grillos-con-aove-reserva-familiar-picual/"><img
+                                            width="150" height="100"
+                                            src="https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-150x100.jpg"
+                                            class="attachment-recetas size-recetas wp-post-image" alt=""
+                                            srcset="https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-150x100.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-300x200.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-1024x683.jpg 1024w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-768x512.jpg 768w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-1536x1024.jpg 1536w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-2048x1365.jpg 2048w, https://www.castillodecanena.com/wp-content/uploads/2020/06/Cubos_judias_Chiarini_Castillo_de_Canena_olive_oil-275x183.jpg 275w"
+                                            sizes="(max-width: 150px) 100vw, 150px" /></a></div>
+                                <a style="color:#a0be76"
+                                    href="https://www.castillodecanena.com/es/cuadritos-de-frijoles-y-grillos-con-aove-reserva-familiar-picual/">Anna
+                                    Chiarini: Cuadritos de frijoles y grillos con AOVE Reserva Familiar Picual</a>
+                            </div>
+                            <div class="receta">
+                                <div class="destacada">
+                                    <a
+                                        href="https://www.castillodecanena.com/es/anna-chiarini-tortellini-de-calabaza-con-ragu-de-pato-trufa/"><img
+                                            width="150" height="100"
+                                            src="https://www.castillodecanena.com/wp-content/uploads/2020/02/Cappellacci_Chiarini_Castillo_de_Canena_olive_oil-150x100.jpg"
+                                            class="attachment-recetas size-recetas wp-post-image" alt=""
+                                            srcset="https://www.castillodecanena.com/wp-content/uploads/2020/02/Cappellacci_Chiarini_Castillo_de_Canena_olive_oil-150x100.jpg 150w, https://www.castillodecanena.com/wp-content/uploads/2020/02/Cappellacci_Chiarini_Castillo_de_Canena_olive_oil-300x200.jpg 300w, https://www.castillodecanena.com/wp-content/uploads/2020/02/Cappellacci_Chiarini_Castillo_de_Canena_olive_oil-768x512.jpg 768w, https://www.castillodecanena.com/wp-content/uploads/2020/02/Cappellacci_Chiarini_Castillo_de_Canena_olive_oil-1024x683.jpg 1024w, https://www.castillodecanena.com/wp-content/uploads/2020/02/Cappellacci_Chiarini_Castillo_de_Canena_olive_oil-275x183.jpg 275w"
+                                            sizes="(max-width: 150px) 100vw, 150px" />
+                                    </a>
+                                </div>
+                                <a style="color:#a0be76"
+                                    href="https://www.castillodecanena.com/es/anna-chiarini-tortellini-de-calabaza-con-ragu-de-pato-trufa/">Anna
+                                    Chiarini: Tortellini de calabaza con ragú de pato y trufas (“Cappellacci di
+                                    zucca alla ferrarese”)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wpb_accordion_section group">
+                    <button id="no-outline" class="accordion">ORIGEN</button>
+                    <div class="panel">
+                        <p>Castillo de Canena toma su nombre del castillo familiar que se alza en la loma
+                            del municipio de Canena (Jaén). La compañía, tiene un escrupuloso
+                            <strong>respeto por el medio ambiente</strong> que se materializa principalmente
+                            con plantas de energía fotovoltaica, una cubierta vegetal en toda la explotación
+                            que reduce la erosión del terreno y preserva la vegetación herbácea autóctona y
+                            la utilización de los restos de poda en biomasa como combustible ecológico no
+                            contaminante. En la actualidad, sus aceites de oliva extravírgenes están
+                            presentes en más de 40 países, donde han sido reconocidos con los máximos
+                            galardones internacionales.</p>
+                        <p>Castillo de Canena es miembro de la alianza <strong>EVA (Extra Virgin
+                                Alliance)</strong>, la primera asociación internacional de productores de
+                            AOVE, cuyo objetivo es promover y garantizar -mediante estrictos controles y un
+                            <strong>sello de calidad común</strong>&#8211; la excelencia en la obtención y
+                            conservación de sus Vírgenes Extra <strong>a lo largo de toda la cadena de
+                                distribución</strong>; así como la sostenibilidad y preservación del
+                            ecosistema del olivar.</p>
+                        <p>La compañía también pertenece a la asociación <strong>Grandes Pagos del
+                                Olivar</strong>, que agrupa a los mejores productores españoles de aceite de
+                            oliva virgen extra, que optan por producciones muy limitadas de un
+                            <strong>aceite de altísima calidad</strong> elaborado bajo métodos que mezclan
+                            el carácter artesanal con la aplicación de las tecnologías más avanzadas.</p>
+                    </div>
+                </div>
+
+                <div class="wpb_accordion_section group">
+                    <button id="no-outline" class="accordion">PRESENTACIÓN</button>
+                    <div class="panel">
+                        <br />
+                    </div>
+                </div>
+
+                <div class="wpb_accordion_section group">
+                    <button id="no-outline" class="accordion">LOGÍSTICAS: PALET EUROPEO</button>
+                    <div class="panel">
+                        <table class="tabla_logistica">
+                            <thead>
+                                <tr>
+                                    <th style="color: #646466;">Producto</th>
+                                    <th>Contenido</th>
+                                    <th>Botellas por caja</th>
+                                    <th>Cajas por pallet</th>
+                                    <th>Capas por pallet</th>
+                                    <th>Altura de la capa</th>
+                                    <th>Dimensión de la caja</th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr>
+                                    <td>RESERVA PICUAL</td>
+                                    <td>500 ml</td>
+                                    <td>6</td>
+                                    <td>120</td>
+                                    <td>4</td>
+                                    <td>32cm</td>
+                                    <td>31,5x19x13</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr></hr>
+    <div class="container" style="text-align:center;">
+        </br>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/LWRBtvZWuHY" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <!-- END INFO CONTENT -->
+    </div>
+    <div id="issuer" class="container">
+        <hr>
+        </hr>
+        <italic>Issuer ID:</italic></br>
+        <span class="issuer-id-url">
+            <a style="color:#a0be76;" target="_blank"
+                href="http://blocktac.com/issuer/TELEFONICATESTETH.json">http://blocktac.com/issuer/TELEFONICATESTETH.json</a>
+        </span>
+        </br></br>
+        <italic>Blockchain Address:</italic>
+        <span class="address"></br>
+            <a style="color:#a0be76;" target="_blank"
+                href="https://ropsten.etherscan.io/tx/0xc778f24d416a2c70c762264a559c399fc1825e9642f636b4353e72f9cfc2901f">https://ropsten.etherscan.io/tx/0xc778f24d416a2c70c762264a559c399fc1825e9642f636b4353e72f9cfc2901f</a>
+        </span>
+        <hr>
+    </div>
+
+    <script>
+       function enviarDenuncia() {
+            var cuerpo = 'Esto es una aviso de un POSIBLE producto NO original: urn:uuid:e23d0f90-b075-496c-8555-bfce40a70af4%0D%0A%0D%0A';
+            cuerpo += 'Asegurese de que usted abrio el producto y la primera vez que se verifico en Blockchain el producto se le comunico como erroneo \(vea el porque mas abajo\).%0D%0A%0D%0A';
+            cuerpo += 'id: ' + 'urn:uuid:e23d0f90-b075-496c-8555-bfce40a70af4%0D%0A%0D%0A';
+            var currentdate = new Date().toLocaleString();
+            var currentid = "urn:uuid:e23d0f90-b075-496c-8555-bfce40a70af4"
+            cuerpo += 'Fecha: ' + currentdate + '%0D%0A%0D%0A';
+            cuerpo += 'Lugar de compra:%0D%0A%0D%0A';
+            cuerpo += 'INCLUYA AQUI OTROS COMENTARIOS:%0D%0A';
+            cuerpo += '%0D%0A%0D%0AVERIFIQUE ESTO ANTES DE ENVIAR EL CORREO:%0D%0A%0D%0ACuando usted ha adquirido un producto, este debe venir con una etiqueta y un codigo QR que usted puede escanear con un telefono movil para comprobar su autenticidad. Al hacer click sobre el boton';
+            cuerpo += '\"Verificar en Blockchain\", el sistema comprobara que el codigo corresponde a un producto original, y que nadie ha escaneado con anterioridad el producto. Si el producto NO es original, el sistema se lo comunicara. Si el producto ha sido escaneado anteriormente \(por usted u otra persona\), el sistema se lo advertira tambien.%0D%0A'
+            cuerpo += 'Por lo tanto, la segunda o sucesivas veces que se escanea el codigo QR, el sistema indica que el paquete ya ha sido abierto y escaneado. Si usted no fue quien escaneo el producto por primera vez, desconfie del mismo y envie este correo';
+
+            window.open('mailto:?subject=Aviso de POSIBLE producto NO ORIGINAL&body=' + cuerpo);
+
+        }
+    </script>
+    <script>
+        function brokenSealMssg(mssg) {
+            message = mssg;
+            return (message);
+        }
+    </script>
+    <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <!-- Footer –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="footer" class="container">
+        <div class="contact">Contacto: <a href="mailto:info@castillodecanena.com">info@castillodecanena.com</a>
+        </div>
+       <div class="home_links">Con la tecnología de 
+            <a href="http://checkcertificate.blocktac.com/" target="_blank">Blocktac</a>&nbsp;y&nbsp;
+            <a href="https://blockchain.telefonica.com/" target="_blank">Telefónica </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

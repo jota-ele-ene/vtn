@@ -53,7 +53,7 @@ $(document).ready(function () {
         var item1 = { "name": "Checking certificate has not been tampered with", "status": "passed" }
         var item2 = { "name": "Checking certificate has not expired", "status": "passed" }
         var item3 = { "name": "Checking not revoked by issuer", "status": "passed" }
-        var item4 = { "name": "Checking authenticity", "status": "passed" }
+        var item4 = { "name": "Checking authenticity", "status": "failed" }
         res = [item1, item2, item3, item4]
         $("#progress-msg").show();
         if (res == null) {
