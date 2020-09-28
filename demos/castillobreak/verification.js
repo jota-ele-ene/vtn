@@ -26,8 +26,8 @@ function renderResponse(i, len, data) {
                 else {
                     $("#progress-msg").html($("#progress-msg").html() + "Oops! The certificate could not be verified with Blockchain.");
                     if (brokenseal) {
-                        mssg = brokenSealMssg("CUIDADO! ESTE PRODUCTO PARECE ORIGINAL PERO OTRA PERSONA LO ABRIO ANTES EL ");
-                        $("#progress-msg").html($("#progress-msg").html() + "<br><b><font color=\"red\">" + mssg + datetimeString + "</b></font>");
+                        mssg = brokenSealMssg("CUIDADO! ESTE PRODUCTO PARECE ORIGINAL PERO OTRA PERSONA LO ABRIO ANTES EL (2020-09-21, 23:2 UTC)");
+                        $("#progress-msg").html($("#progress-msg").html() + "<br><b><font color=\"red\">" + mssg + "</b></font>");
                     }
                     $("#not-verified").show();
                 }
