@@ -4,7 +4,6 @@ function hidefields(fields) {
     }
 }
 
-brokenseal = false;
 datetimeString = '';
 
 function renderResponse(i, len, data) {
@@ -14,7 +13,7 @@ function renderResponse(i, len, data) {
         message = data.name;
         value = data.status;
         if (i != len ) {
-            $("#progress-msg").html($("#progress-msg").html() + 'Step ' + count.toString() + ' of ' + total.toString() + "... " + message + '</span>');
+            $("#progress-msg").html($("#progress-msg").html() + 'Step ' + count.toString() + ' of ' + len.toString() + "... " + message + '</span>');
             $("#progress-msg").html($("#progress-msg").html() + ' [' + markMappings[value] + ']<br>')
         }
         setTimeout(function () {
