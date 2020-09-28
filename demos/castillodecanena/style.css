@@ -253,6 +253,12 @@ input[type=radio]+.lbl.padding-8::before {
     font-weight:bold;
 }
 
+/* Style de table detail */
+
+.table-detail {
+    border-top: 1px solid #DADADC;
+    border-bottom: 1px solid #DADADC;
+}
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
 .active, .accordion:hover {
@@ -295,6 +301,11 @@ input[type=radio]+.lbl.padding-8::before {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+.panel table {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
 }
 
 .accordion:after {
