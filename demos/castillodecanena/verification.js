@@ -4,6 +4,7 @@ function hidefields(fields) {
     }
 }
 
+brokenseal = true;
 datetimeString = '';
 
 function renderResponse(i, len, data) {
