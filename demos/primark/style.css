@@ -1,6 +1,10 @@
 
-@import url(https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff);
-@import url(https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff2);
+
+@font-face {
+  font-family: 'ArialMTPro-ExtraBoldCond';
+  src:  url('ArialMTPro-ExtraBoldCond.woff2') format('woff2'),
+        url('ArialMTPro-ExtraBoldCond.woff') format('woff');
+}
 
 /* --------------------------------     styles for index.html pages ------------------------------- */
 
