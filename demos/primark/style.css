@@ -283,7 +283,7 @@ input[type=radio]+.lbl.padding-8::before {
     border-bottom: 1px solid #DADADC;
 }
 
-.table-detail td{
+.table-detail .param{
     color: #1C97C2;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
