@@ -1,4 +1,8 @@
-
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff2') format('woff2'),
+        url('https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff') format('woff');
+}
 /* --------------------------------     styles for index.html pages ------------------------------- */
 
 .container h4 {
