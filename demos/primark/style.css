@@ -1,4 +1,20 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff2') format('woff2'),
+        url('https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff') format('woff');
+}
 /* --------------------------------     styles for index.html pages ------------------------------- */
+
+.container h4 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'ArialMTPro-ExtraBoldCond', 'Impact', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0;
+    color: #323232;
+    margin-bottom: 20px;
+}
 
 #mobile-menu-trigger {
     position: absolute;
@@ -242,7 +258,7 @@ input[type=radio]+.lbl.padding-8::before {
 
 .accordion {
     background-color: white;
-    color: #646466;
+    color: #1C97C2;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -259,12 +275,16 @@ input[type=radio]+.lbl.padding-8::before {
     border-top: 1px solid #DADADC;
     border-bottom: 1px solid #DADADC;
 }
+
+.table-detail td{
+    color: #1C97C2;
+}
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
 .active, .accordion:hover {
-    color: #a0be76;
+    color: #1C97C2;
     outline: none;
-    border-color: #a0be76;
+    border-color: #1C97C2;
 }
 
 #no-outline {
@@ -566,14 +586,14 @@ ul.verifying {
 }
 
 #verify-button-AX2 {
+    color: #ffffff;
+    background-color: #323232;
+    font-size: 50%;
     margin-right: 5px;
-    font-size: 2rem;
     width: 85%;
     max-width: 400px;
     height: 80%;
     border: none;
-    background-color: #e40613;
-    color: white;
 }
 
 #verify-button-AX2:focus {
