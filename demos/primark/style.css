@@ -1,8 +1,7 @@
-@font-face {
-  font-family: 'ArialMTPro-ExtraBoldCond';
-  src:  url('https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff2') format('woff2'),
-        url('https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff') format('woff');
-}
+
+@import url(https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff);
+@import url(https://www.primark.com/_ui/responsive/theme-primark/fonts/ArialMTPro-ExtraBoldCond.woff2);
+
 /* --------------------------------     styles for index.html pages ------------------------------- */
 
 .font {
