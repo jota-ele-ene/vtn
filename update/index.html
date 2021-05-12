@@ -1,0 +1,207 @@
+<html lang="en"><head><meta charset="UTF-8">
+    <title>TrustOS: Asset Updated</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            width: 80%;
+            max-width: 600px;
+            height: 100%;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: fefefe;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        .body-content {
+            background-color: ffffff;
+            box-shadow: 0 0 20px rgb(0 0 0 / 14%);
+            border-radius: 10px;
+        }
+    
+        .dummy-positioning {
+            width: 100%;
+            height: 22vh;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .success-icon {
+            display: block;
+            margin: auto;
+            width: 8em;
+            height: 8em;
+            font-size: 20px;
+            border-radius: 50%;
+            border: 4px solid #96df8f;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            transform-origin: center;
+            animation: showSuccess 180ms ease-in-out;
+            transform: scale(1);
+        }
+    
+        .success-icon__tip,
+        .success-icon__long {
+            display: block;
+            position: absolute;
+            height: 4px;
+            background-color: #96df8f;
+            border-radius: 10px;
+        }
+    
+        .success-icon__tip {
+            width: 2.4em;
+            top: 4.3em;
+            left: 1.4em;
+            transform: rotate(45deg);
+            animation: tipInPlace 300ms ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 180ms;
+            visibility: hidden;
+        }
+    
+        .success-icon__long {
+            width: 4em;
+            transform: rotate(-45deg);
+            top: 3.7em;
+            left: 2.75em;
+            animation: longInPlace 140ms ease-in-out;
+            animation-fill-mode: forwards;
+            visibility: hidden;
+            animation-delay: 440ms;
+        }
+    
+        .hidden {
+            opacity: 0;
+            animation: showSlowly 500ms forwards;
+            animation-delay: 300ms;
+        }
+    
+        @keyframes showSuccess {
+            from {
+                transform: scale(0);
+            }
+    
+            to {
+                transform: scale(1);
+            }
+        }
+    
+        @keyframes tipInPlace {
+            from {
+                width: 0em;
+                top: 0em;
+                left: -1.6em;
+            }
+    
+            to {
+                width: 2.4em;
+                top: 4.3em;
+                left: 1.4em;
+                visibility: visible;
+            }
+        }
+    
+        @keyframes longInPlace {
+            from {
+                width: 0em;
+                top: 5.1em;
+                left: 3.2em;
+            }
+    
+            to {
+                width: 4em;
+                top: 3.7em;
+                left: 2.75em;
+                visibility: visible;
+            }
+        }
+    
+        @keyframes showSlowly {
+            from {
+                opacity: 0;
+            }
+    
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script src=""></script>
+    
+    </head>
+    <body>
+        <div class="body-content">
+            <br><br>
+            <br><br>
+            <div class="dummy-positioning d-flex">
+                            <div class="success-icon">
+                                <div class="success-icon__tip"></div>
+                                <div class="success-icon__long"></div>
+                            </div>
+                        </div><br><br><table width="100%" cellspacing="10" cellpadding="">
+                <tbody>
+                    <tr>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="hidden" style="text-align:center; ">
+                            <h1 style="color: #333333; font-size: 22px; margin:0px;"><strong>TRANSACTION </strong></h1>
+                            <h1 style="color: #333333; font-size: 22px;  margin:0px; "><strong>REGISTERED</strong></h1>
+                        </td>
+                    </tr>
+                    <tr class="hidden" style="animation-delay: 600ms;">
+                        <td style="padding-left:10px; padding-right:10px; overflow-wrap: anywhere;">
+                            <p style="text-align: center; font-size: 16px;">The asset has been successfully updated
+                            </p>
+                            <p style="text-align: center; font-size: 16px; overflow-wrap: anywhere;">If did not make this request, just ignore this message. Otherwise, please copy the ID of the transaction:</p>
+                            <p id="transaction" style="text-align: center; font-size: 16px; overflow-wrap: anywhere; color: #2c68ffdb;font-style: italic;"> &nbsp;</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="hidden" style="animation-delay: 900ms;">
+                <p style="text-align:center; color: #333333; font-size: 14px;">Powered by <strong>TrustOS</strong></p>
+                <p style="text-align:center;"><img src="https://www.telefonica.com/documents/20195/146013668/telefonica-logo-azul.png/03c9a0c0-57eb-eb53-5649-79e382fd4965?t=1618483185177" alt="Telefónica" style="margin-bottom:20px;" width="175"></p>
+            </div>
+        </div>
+    
+    
+        <script>
+        
+            window.onload = function () {
+                // code
+                var xhr = new XMLHttpRequest();
+                xhr.withCredentials = true;
+        
+        
+        
+                xhr.open("POST", "http://demo-primark-tru-os2-ba-api.apps.osh-jc2.om.dsn.inet/sendtransaction", true);
+                xhr.withCredentials = false;
+                xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status == 200) {
+                        console.log("Response:")
+                        var response = JSON.parse(xhr.responseText)
+                        console.log(response)
+                        elemento = document.getElementById("transaction");
+                        elemento.textContent = response.output.hfTxId || "..."
+                    }
+                }
+                
+                xhr.send("");
+        
+                /* ignore result */
+                console.log(xhr.response)
+            };
+        
+        </script>
+    
+    </body>
+    
+</html>
