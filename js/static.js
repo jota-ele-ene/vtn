@@ -1,3 +1,5 @@
+console.log(990249);
+
 var appTitle = new Vue({
     el: '.title',
     data: {
