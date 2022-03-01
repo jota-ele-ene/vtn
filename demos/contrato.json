@@ -1,0 +1,59 @@
+{
+    "DATA": 
+	{
+
+		"NumContrato": "N41258",
+		"CodigoEmplazamiento": "TR0001",
+		"FechaInicioContrato": "2019-08-24T14:15:22Z",
+		"FechaFinContrato": "2022-08-24T14:15:22Z",
+		"FechaFirmaContrato": "2019-08-24T14:15:22Z", 
+		"TipoContrato":"Arrendamiento"
+    }
+	"METADATA": 
+	{
+
+		"IFRS": {
+			"RelevanteParaValoracion": "SI",
+			"FechaFinProbable": "2024-08-24T14:15:22Z",
+		},
+		"Condiciones": [
+			{
+				"Codigo": "X100",
+				"CodigoDetalle": "1",
+				"Importe": 100.5,
+				"Periodicidad": 1,
+				"FechaInicio": "2019-08-24T14:15:22Z",
+				"FechaFin": "2020-08-24T14:15:22Z",
+				"Moneda": "EUR",
+				"Partners":[
+					{
+						"ID":"B77887788",
+						"Nombre":"Beneficiario1",
+						"Cantidad":1
+					
+					}
+				],
+				"Ajustes":[
+					{
+						"TipoAjuste":"B77887788",
+						"Indice":"IPC",
+						"Valor":0.5,
+						"Periodicidad":12,
+						"FechaAjuste":"2020-08-24T14:15:22Z"
+					
+					}
+				],
+				"AplicaProrroga": "SI"
+			}
+		],
+		"Prorrogas":{
+			"TieneProrroga":"SI",
+			"ProrrogaAutomatica": "SI",
+			"PeriodoProrrogado":24,
+			"NumeroMaximo":2
+		},
+		"FechaEfectivaFinContrato":"2022-08-24T14:15:22Z",
+		"ExpirarAVencimiento":"SI"
+			
+    }
+}
